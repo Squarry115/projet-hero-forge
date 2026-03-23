@@ -472,6 +472,6 @@ class __TwigTemplate_6531a44de6c131b0cb8dee6a24d476b1 extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "C:\\Users\\comra\\PhpstormProjects\\projetmoncul\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "C:\\Users\\lucac\\Desktop\\Cours\\web\\Forge de heros\\projet-hero-forge\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
     }
 }

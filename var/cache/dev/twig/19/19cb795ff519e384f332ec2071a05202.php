@@ -625,6 +625,6 @@ class __TwigTemplate_1bed5693c39a208bf91c6561cb6134ec extends Template
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\comra\\PhpstormProjects\\projetmoncul\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\lucac\\Desktop\\Cours\\web\\Forge de heros\\projet-hero-forge\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

@@ -989,6 +989,6 @@ class __TwigTemplate_81edaae9566cef474baf21c0107c4ff7 extends Template
         </td>
     </tr>
 {% endmacro %}
-", "@DoctrineMigrations/Collector/migrations.html.twig", "C:\\Users\\comra\\PhpstormProjects\\projetmoncul\\vendor\\doctrine\\doctrine-migrations-bundle\\templates\\Collector\\migrations.html.twig");
+", "@DoctrineMigrations/Collector/migrations.html.twig", "C:\\Users\\lucac\\Desktop\\Cours\\web\\Forge de heros\\projet-hero-forge\\vendor\\doctrine\\doctrine-migrations-bundle\\templates\\Collector\\migrations.html.twig");
     }
 }

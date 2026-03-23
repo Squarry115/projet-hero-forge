@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">C:\Users\comra\PhpstormProjects\projetmoncul</parameter>
+    <parameter key="kernel.project_dir">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.runtime_mode">%env(query_string:default:container.runtime_mode:APP_RUNTIME_MODE)%</parameter>
@@ -9,9 +9,9 @@
     <parameter key="kernel.runtime_mode.cli">%env(not:default:kernel.runtime_mode.web:)%</parameter>
     <parameter key="kernel.runtime_mode.worker">%env(bool:default::key:worker:default:kernel.runtime_mode:)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev</parameter>
-    <parameter key="kernel.cache_dir">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\Users\comra\PhpstormProjects\projetmoncul\var\log</parameter>
+    <parameter key="kernel.build_dir">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev</parameter>
+    <parameter key="kernel.cache_dir">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
@@ -26,70 +26,75 @@
       <parameter key="MonologBundle">Symfony\Bundle\MonologBundle\MonologBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
       <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
+      <parameter key="NelmioCorsBundle">Nelmio\CorsBundle\NelmioCorsBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\debug-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\debug-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="StimulusBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\stimulus-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\stimulus-bundle</parameter>
         <parameter key="namespace">Symfony\UX\StimulusBundle</parameter>
       </parameter>
       <parameter key="TurboBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\ux-turbo</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\ux-turbo</parameter>
         <parameter key="namespace">Symfony\UX\Turbo</parameter>
       </parameter>
       <parameter key="TwigExtraBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\twig\extra-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\twig\extra-bundle</parameter>
         <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\monolog-bundle\src</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\monolog-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\maker-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\maker-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="DoctrineFixturesBundle" type="collection">
-        <parameter key="path">C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-fixtures-bundle</parameter>
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-fixtures-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
+      </parameter>
+      <parameter key="NelmioCorsBundle" type="collection">
+        <parameter key="path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\nelmio\cors-bundle</parameter>
+        <parameter key="namespace">Nelmio\CorsBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
-    <parameter key="kernel.share_dir">C:\Users\comra\PhpstormProjects\projetmoncul\var\share\dev</parameter>
+    <parameter key="kernel.share_dir">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\var\share\dev</parameter>
     <parameter key=".container.known_envs" type="collection">
       <parameter>dev</parameter>
       <parameter>test</parameter>
       <parameter>prod</parameter>
     </parameter>
-    <parameter key=".kernel.config_dir">C:\Users\comra\PhpstormProjects\projetmoncul/config</parameter>
+    <parameter key=".kernel.config_dir">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/config</parameter>
     <parameter key=".kernel.bundles_definition" type="collection">
       <parameter key="Symfony\Bundle\FrameworkBundle\FrameworkBundle" type="collection">
         <parameter key="all">true</parameter>
@@ -132,6 +137,9 @@
         <parameter key="dev">true</parameter>
         <parameter key="test">true</parameter>
       </parameter>
+      <parameter key="Nelmio\CorsBundle\NelmioCorsBundle" type="collection">
+        <parameter key="all">true</parameter>
+      </parameter>
     </parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
@@ -171,19 +179,19 @@
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="translator.logging">false</parameter>
-    <parameter key="translator.default_path">C:\Users\comra\PhpstormProjects\projetmoncul/translations</parameter>
+    <parameter key="translator.default_path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/translations</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"/>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
-    <parameter key="router.cache_dir">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev</parameter>
+    <parameter key="router.cache_dir">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/serialization.php</parameter>
     <parameter key=".serializer.named_serializers" type="collection"/>
-    <parameter key="cache.prefix.seed">_C:\Users\comra\PhpstormProjects\projetmoncul.App_KernelDevDebugContainer</parameter>
+    <parameter key="cache.prefix.seed">_C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -200,11 +208,11 @@
       <parameter key="data-controller">csrf-protection</parameter>
     </parameter>
     <parameter key=".form.type_extension.csrf.token_id">submit</parameter>
-    <parameter key="validator.mapping.cache.file">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_main_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/profiler</parameter>
     <parameter key="doctrine.entity_managers" type="collection">
       <parameter key="default">doctrine.orm.default_entity_manager</parameter>
     </parameter>
@@ -230,7 +238,7 @@
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">C:\Users\comra\PhpstormProjects\projetmoncul/templates</parameter>
+    <parameter key="twig.default_path">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection"/>
@@ -260,6 +268,41 @@
         </parameter>
       </parameter>
     </parameter>
+    <parameter key="nelmio_cors.map" type="collection">
+      <parameter key="^/api/" type="collection">
+        <parameter key="allow_origin">true</parameter>
+        <parameter key="allow_methods" type="collection">
+          <parameter>GET</parameter>
+          <parameter>OPTIONS</parameter>
+        </parameter>
+        <parameter key="allow_headers" type="collection">
+          <parameter>content-type</parameter>
+        </parameter>
+        <parameter key="max_age">3600</parameter>
+      </parameter>
+    </parameter>
+    <parameter key="nelmio_cors.defaults" type="collection">
+      <parameter key="allow_origin">true</parameter>
+      <parameter key="allow_credentials">false</parameter>
+      <parameter key="allow_headers" type="collection">
+        <parameter>content-type</parameter>
+        <parameter>authorization</parameter>
+      </parameter>
+      <parameter key="allow_private_network">false</parameter>
+      <parameter key="expose_headers" type="collection"/>
+      <parameter key="allow_methods" type="collection">
+        <parameter>GET</parameter>
+        <parameter>OPTIONS</parameter>
+      </parameter>
+      <parameter key="max_age">3600</parameter>
+      <parameter key="hosts" type="collection"/>
+      <parameter key="origin_regex">true</parameter>
+      <parameter key="skip_same_as_origin">true</parameter>
+      <parameter key="forced_allow_origin_value">null</parameter>
+    </parameter>
+    <parameter key="nelmio_cors.cors_listener.class">Nelmio\CorsBundle\EventListener\CorsListener</parameter>
+    <parameter key="nelmio_cors.options_resolver.class">Nelmio\CorsBundle\Options\Resolver</parameter>
+    <parameter key="nelmio_cors.options_provider.config.class">Nelmio\CorsBundle\Options\ConfigProvider</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -321,10 +364,6 @@
         <parameter>twig</parameter>
         <parameter>@WebProfiler/Collector/twig.html.twig</parameter>
       </parameter>
-      <parameter key="data_collector.http_client" type="collection">
-        <parameter>http_client</parameter>
-        <parameter>@WebProfiler/Collector/http_client.html.twig</parameter>
-      </parameter>
       <parameter key="data_collector.doctrine" type="collection">
         <parameter>db</parameter>
         <parameter>@Doctrine/Collector/db.html.twig</parameter>
@@ -361,6 +400,46 @@
     <service id="kernel" class="App\Kernel" public="true" synthetic="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
+    </service>
+    <service id="App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\Api\ApiCharacterController"/>
+      </call>
+    </service>
+    <service id="App\Controller\Api\ApiClassController" class="App\Controller\Api\ApiClassController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\Api\ApiClassController"/>
+      </call>
+    </service>
+    <service id="App\Controller\Api\ApiPartyController" class="App\Controller\Api\ApiPartyController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\Api\ApiPartyController"/>
+      </call>
+    </service>
+    <service id="App\Controller\Api\ApiRaceController" class="App\Controller\Api\ApiRaceController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\Api\ApiRaceController"/>
+      </call>
+    </service>
+    <service id="App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\Api\ApiSkillController"/>
+      </call>
     </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
@@ -442,7 +521,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" priority="-50">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.8JS6QTA"/>
+      <argument type="service" id=".service_locator.yMnRLvv"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" priority="-100">controller.argument_value_resolver</tag>
@@ -536,7 +615,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\share\dev/http_cache</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\var\share\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -546,7 +625,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -583,9 +662,6 @@
         <argument key="cache.property_info" type="service" id="cache.property_info" on-invalid="ignore_uninitialized"/>
         <argument key="cache.asset_mapper" type="service" id="cache.asset_mapper" on-invalid="ignore_uninitialized"/>
         <argument key="cache.messenger.restart_workers_signal" type="service" id="cache.messenger.restart_workers_signal" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.http_client.pool" type="service" id="cache.http_client.pool" on-invalid="ignore_uninitialized"/>
-        <argument key="http_client.transport" type="service" id="http_client.transport" on-invalid="ignore_uninitialized"/>
-        <argument key="http_client" type="service" id="http_client.uri_template" on-invalid="ignore_uninitialized"/>
         <argument key="mailer.message_logger_listener" type="service" id="mailer.message_logger_listener" on-invalid="ignore_uninitialized"/>
         <argument key="translation.locale_switcher" type="service" id="translation.locale_switcher" on-invalid="ignore_uninitialized"/>
         <argument key="debug.stopwatch" type="service" id="debug.stopwatch" on-invalid="ignore_uninitialized"/>
@@ -614,7 +690,6 @@
         <argument key="monolog.handler.main" type="service" id="monolog.handler.main" on-invalid="ignore_uninitialized"/>
         <argument key="monolog.handler.console" type="service" id="monolog.handler.console" on-invalid="ignore_uninitialized"/>
         <argument key="debug.security.event_dispatcher.main" type="service" id="debug.security.event_dispatcher.main" on-invalid="ignore_uninitialized"/>
-        <argument key=".debug.http_client" type="service" id=".debug.http_client" on-invalid="ignore_uninitialized"/>
       </argument>
       <argument type="collection">
         <argument key="controller.cache_attribute_listener" type="collection">
@@ -646,15 +721,6 @@
         </argument>
         <argument key="cache.messenger.restart_workers_signal" type="collection">
           <argument>reset</argument>
-        </argument>
-        <argument key="cache.http_client.pool" type="collection">
-          <argument>reset</argument>
-        </argument>
-        <argument key="http_client.transport" type="collection">
-          <argument>?reset</argument>
-        </argument>
-        <argument key="http_client" type="collection">
-          <argument>?reset</argument>
         </argument>
         <argument key="mailer.message_logger_listener" type="collection">
           <argument>reset</argument>
@@ -739,9 +805,6 @@
           <argument>reset</argument>
         </argument>
         <argument key="debug.security.event_dispatcher.main" type="collection">
-          <argument>reset</argument>
-        </argument>
-        <argument key=".debug.http_client" type="collection">
           <argument>reset</argument>
         </argument>
       </argument>
@@ -831,7 +894,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -874,7 +937,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -906,7 +969,6 @@
         <argument>cache.property_info</argument>
         <argument>cache.asset_mapper</argument>
         <argument>cache.messenger.restart_workers_signal</argument>
-        <argument>cache.http_client.pool</argument>
         <argument>cache.validator_expression_language</argument>
         <argument>cache.doctrine.orm.default.result</argument>
         <argument>cache.doctrine.orm.default.query</argument>
@@ -935,7 +997,7 @@
     <service id="console.command.cache_pool_invalidate_tags" class="Symfony\Bundle\FrameworkBundle\Command\CachePoolInvalidateTagsCommand">
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
-      <argument type="service" id=".service_locator.6eloqTE"/>
+      <argument type="service" id=".service_locator.YDYHnos"/>
       <call method="setName">
         <argument>cache:pool:invalidate-tags</argument>
       </call>
@@ -955,7 +1017,6 @@
         <argument>cache.property_info</argument>
         <argument>cache.asset_mapper</argument>
         <argument>cache.messenger.restart_workers_signal</argument>
-        <argument>cache.http_client.pool</argument>
         <argument>cache.validator_expression_language</argument>
         <argument>cache.doctrine.orm.default.result</argument>
         <argument>cache.doctrine.orm.default.query</argument>
@@ -981,7 +1042,6 @@
         <argument>cache.property_info</argument>
         <argument>cache.asset_mapper</argument>
         <argument>cache.messenger.restart_workers_signal</argument>
-        <argument>cache.http_client.pool</argument>
         <argument>cache.validator_expression_language</argument>
         <argument>cache.doctrine.orm.default.result</argument>
         <argument>cache.doctrine.orm.default.query</argument>
@@ -1064,7 +1124,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument>dev</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <call method="setName">
         <argument>debug:dotenv</argument>
       </call>
@@ -1142,12 +1202,6 @@
               <argument type="collection">
                 <argument key="sign">true</argument>
               </argument>
-            </argument>
-          </argument>
-          <argument key="Symfony\Component\HttpClient\Messenger\PingWebhookMessage" type="collection">
-            <argument type="collection">
-              <argument>http_client.messenger.ping_webhook_handler</argument>
-              <argument type="collection"/>
             </argument>
           </argument>
           <argument key="Symfony\Component\Mailer\Messenger\SendEmailMessage" type="collection">
@@ -1306,16 +1360,16 @@
       <argument type="service" id="translator.data_collector"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/translations</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/templates</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/translations</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/templates</argument>
       <argument type="collection">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -1332,16 +1386,16 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>en</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/translations</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/templates</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/translations</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/templates</argument>
       <argument type="collection">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -1624,7 +1678,7 @@
       <argument/>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1643,7 +1697,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument/>
       <argument>0</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\share\dev/pools/app</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\var\share\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1729,7 +1783,6 @@
       <argument type="collection">
         <argument key="cache.app" type="service" id="cache.app" on-invalid="ignore_uninitialized"/>
         <argument key="cache.messenger.restart_workers_signal" type="service" id="cache.messenger.restart_workers_signal" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.http_client.pool" type="service" id="cache.http_client.pool" on-invalid="ignore_uninitialized"/>
       </argument>
     </service>
     <service id="cache.system_clearer" class="Symfony\Component\HttpKernel\CacheClearer\Psr6CacheClearer" public="true">
@@ -1756,7 +1809,6 @@
         <argument key="cache.property_info" type="service" id="cache.property_info" on-invalid="ignore_uninitialized"/>
         <argument key="cache.asset_mapper" type="service" id="cache.asset_mapper" on-invalid="ignore_uninitialized"/>
         <argument key="cache.messenger.restart_workers_signal" type="service" id="cache.messenger.restart_workers_signal" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.http_client.pool" type="service" id="cache.http_client.pool" on-invalid="ignore_uninitialized"/>
         <argument key="cache.validator_expression_language" type="service" id="cache.validator_expression_language" on-invalid="ignore_uninitialized"/>
         <argument key="cache.doctrine.orm.default.result" type="service" id="cache.doctrine.orm.default.result" on-invalid="ignore_uninitialized"/>
         <argument key="cache.doctrine.orm.default.query" type="service" id="cache.doctrine.orm.default.query" on-invalid="ignore_uninitialized"/>
@@ -1803,7 +1855,7 @@
     <service id="assets.empty_version_strategy" class="Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy"/>
     <service id="assets.json_manifest_version_strategy" class="Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy" abstract="true">
       <argument type="abstract">manifest path</argument>
-      <argument type="service" id="http_client.uri_template" on-invalid="null"/>
+      <argument type="service" id="http_client" on-invalid="null"/>
       <argument>false</argument>
     </service>
     <service id="asset_mapper" class="Symfony\Component\AssetMapper\AssetMapper">
@@ -1814,16 +1866,16 @@
     <service id="asset_mapper.cached_mapped_asset_factory" class="Symfony\Component\AssetMapper\Factory\CachedMappedAssetFactory">
       <tag name="container.decorator" id="asset_mapper.mapped_asset_factory" inner="asset_mapper.cached_mapped_asset_factory.inner"/>
       <argument type="service" id="asset_mapper.cached_mapped_asset_factory.inner"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/asset_mapper</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/asset_mapper</argument>
       <argument>true</argument>
     </service>
     <service id="asset_mapper.repository" class="Symfony\Component\AssetMapper\AssetMapperRepository">
       <argument type="collection">
-        <argument key="C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\ux-turbo\src\DependencyInjection/../../assets/dist">@symfony/ux-turbo</argument>
-        <argument key="C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\stimulus-bundle\src\DependencyInjection/../../assets/dist">@symfony/stimulus-bundle</argument>
+        <argument key="C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\ux-turbo\src\DependencyInjection/../../assets/dist">@symfony/ux-turbo</argument>
+        <argument key="C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\stimulus-bundle\src\DependencyInjection/../../assets/dist">@symfony/stimulus-bundle</argument>
         <argument key="assets/"/>
       </argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument type="collection">
         <argument>#^(?=[^\.]).*\.d\.ts$#</argument>
         <argument>#^(?=[^\.]).*/(?=[^\.])controllers\.json$#</argument>
@@ -1835,10 +1887,10 @@
       <argument>/assets/</argument>
     </service>
     <service id="asset_mapper.local_public_assets_filesystem" class="Symfony\Component\AssetMapper\Path\LocalPublicAssetsFilesystem">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/public</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/public</argument>
     </service>
     <service id="asset_mapper.compiled_asset_mapper_config_reader" class="Symfony\Component\AssetMapper\CompiledAssetMapperConfigReader">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/public/assets</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/public/assets</argument>
     </service>
     <service id="asset_mapper.asset_package" class="Symfony\Component\AssetMapper\MapperAwareAssetPackage">
       <tag name="container.decorator" id="assets._default_package" inner="asset_mapper.asset_package.inner"/>
@@ -1862,7 +1914,7 @@
       <argument type="service" id="asset_mapper"/>
       <argument type="service" id="asset_mapper.importmap.generator"/>
       <argument type="service" id="asset_mapper.local_public_assets_filesystem"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument>true</argument>
       <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
       <call method="setName">
@@ -1877,7 +1929,7 @@
       <tag name="container.no_preload"/>
       <argument type="service" id="asset_mapper"/>
       <argument type="service" id="asset_mapper.repository"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <call method="setName">
         <argument>debug:asset-map</argument>
       </call>
@@ -1906,7 +1958,7 @@
       <argument type="service" id="monolog.logger.asset_mapper"/>
     </service>
     <service id="asset_mapper.importmap.config_reader" class="Symfony\Component\AssetMapper\ImportMap\ImportMapConfigReader">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/importmap.php</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/importmap.php</argument>
       <argument type="service" id="asset_mapper.importmap.remote_package_storage"/>
     </service>
     <service id="asset_mapper.importmap.manager" class="Symfony\Component\AssetMapper\ImportMap\ImportMapManager">
@@ -1921,7 +1973,7 @@
       <argument type="service" id="asset_mapper.importmap.config_reader"/>
     </service>
     <service id="asset_mapper.importmap.remote_package_storage" class="Symfony\Component\AssetMapper\ImportMap\RemotePackageStorage">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/assets/vendor</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/assets/vendor</argument>
     </service>
     <service id="asset_mapper.importmap.remote_package_downloader" class="Symfony\Component\AssetMapper\ImportMap\RemotePackageDownloader">
       <argument type="service" id="asset_mapper.importmap.remote_package_storage"/>
@@ -1933,7 +1985,7 @@
       <argument type="service" id="asset_mapper.importmap.remote_package_downloader"/>
     </service>
     <service id="asset_mapper.importmap.resolver" class="Symfony\Component\AssetMapper\ImportMap\Resolver\JsDelivrEsmResolver">
-      <argument type="service" id="http_client.uri_template"/>
+      <argument type="service" id="asset_mapper.http_client"/>
     </service>
     <service id="asset_mapper.importmap.renderer" class="Symfony\Component\AssetMapper\ImportMap\ImportMapRenderer">
       <argument type="service" id="asset_mapper.importmap.generator"/>
@@ -1947,18 +1999,18 @@
     </service>
     <service id="asset_mapper.importmap.auditor" class="Symfony\Component\AssetMapper\ImportMap\ImportMapAuditor">
       <argument type="service" id="asset_mapper.importmap.config_reader"/>
-      <argument type="service" id="http_client.uri_template"/>
+      <argument type="service" id="asset_mapper.http_client"/>
     </service>
     <service id="asset_mapper.importmap.update_checker" class="Symfony\Component\AssetMapper\ImportMap\ImportMapUpdateChecker">
       <argument type="service" id="asset_mapper.importmap.config_reader"/>
-      <argument type="service" id="http_client.uri_template"/>
+      <argument type="service" id="asset_mapper.http_client"/>
     </service>
     <service id="asset_mapper.importmap.command.require" class="Symfony\Component\AssetMapper\Command\ImportMapRequireCommand">
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="asset_mapper.importmap.manager"/>
       <argument type="service" id="asset_mapper.importmap.version_checker"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <call method="setName">
         <argument>importmap:require</argument>
       </call>
@@ -1993,7 +2045,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="asset_mapper.importmap.remote_package_downloader"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <call method="setName">
         <argument>importmap:install</argument>
       </call>
@@ -2041,60 +2093,8 @@
         <argument>Pre-compresses files to serve through a web server</argument>
       </call>
     </service>
-    <service id="cache.http_client.pool" class="Symfony\Component\Cache\Adapter\TraceableAdapter" public="true">
-      <tag name="cache.pool" pruneable="true"/>
-      <tag name="kernel.reset" method="reset"/>
-      <argument type="service" id="cache.http_client.pool.recorder_inner"/>
-      <argument type="service" id="profiler.is_disabled_state_checker" on-invalid="ignore"/>
-    </service>
-    <service id="cache.http_client" class="Symfony\Component\Cache\Adapter\TagAwareAdapter">
-      <tag name="cache.taggable" pool="cache.http_client.pool"/>
-      <argument type="service" id="cache.http_client.pool"/>
-    </service>
-    <service id="http_client.transport" class="Symfony\Contracts\HttpClient\HttpClientInterface">
-      <tag name="monolog.logger" channel="http_client"/>
-      <tag name="kernel.reset" method="reset" on_invalid="ignore"/>
-      <argument type="collection"/>
-      <argument>6</argument>
-      <call method="setLogger">
-        <argument type="service" id="monolog.logger.http_client" on-invalid="ignore"/>
-      </call>
-      <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
-    </service>
-    <service id="http_client.abstract_retry_strategy" class="Symfony\Component\HttpClient\Retry\GenericRetryStrategy" abstract="true">
-      <argument type="abstract">http codes</argument>
-      <argument type="abstract">delay ms</argument>
-      <argument type="abstract">multiplier</argument>
-      <argument type="abstract">max delay ms</argument>
-      <argument type="abstract">jitter</argument>
-    </service>
-    <service id="http_client.uri_template" class="Symfony\Component\HttpClient\UriTemplateHttpClient">
-      <tag name="http_client.client"/>
-      <tag name="kernel.reset" method="reset"/>
-      <tag name="container.decorator" id="http_client" inner=".debug.http_client.inner"/>
-      <argument type="service" id=".debug.http_client"/>
-      <argument>null</argument>
-      <argument type="collection"/>
-    </service>
-    <service id="http_client.uri_template_expander.guzzle" class="Closure">
-      <argument type="collection">
-        <argument>GuzzleHttp\UriTemplate\UriTemplate</argument>
-        <argument>expand</argument>
-      </argument>
-      <factory class="Closure" method="fromCallable"/>
-    </service>
-    <service id="http_client.uri_template_expander.rize" class="Closure">
-      <argument type="collection">
-        <argument type="service">
-          <service class="Rize\UriTemplate"/>
-        </argument>
-        <argument>expand</argument>
-      </argument>
-      <factory class="Closure" method="fromCallable"/>
-    </service>
-    <service id="http_client.messenger.ping_webhook_handler" class="Symfony\Component\HttpClient\Messenger\PingWebhookMessageHandler">
-      <tag name="messenger.message_handler"/>
-      <argument type="service" id="http_client.uri_template"/>
+    <service id="asset_mapper.http_client" class="Symfony\Contracts\HttpClient\HttpClientInterface">
+      <tag name="container.error" message="You cannot use the AssetMapper integration since the HttpClient component is not enabled. Try enabling the &quot;framework.http_client&quot; config option."/>
     </service>
     <service id="mailer.mailer" class="Symfony\Component\Mailer\Mailer">
       <argument type="service" id="mailer.transports"/>
@@ -2141,31 +2141,31 @@
     <service id="mailer.transport_factory.abstract" class="Symfony\Component\Mailer\Transport\AbstractTransportFactory" abstract="true">
       <tag name="monolog.logger" channel="mailer"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="ignore"/>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.mailer" on-invalid="ignore"/>
     </service>
     <service id="mailer.transport_factory.native" class="Symfony\Component\Mailer\Transport\NativeTransportFactory">
       <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="ignore"/>
+      <argument>null</argument>
       <argument type="service" id="monolog.logger.mailer" on-invalid="ignore"/>
     </service>
     <service id="mailer.transport_factory.null" class="Symfony\Component\Mailer\Transport\NullTransportFactory">
       <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="ignore"/>
+      <argument>null</argument>
       <argument type="service" id="monolog.logger.mailer" on-invalid="ignore"/>
     </service>
     <service id="mailer.transport_factory.sendmail" class="Symfony\Component\Mailer\Transport\SendmailTransportFactory">
       <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="ignore"/>
+      <argument>null</argument>
       <argument type="service" id="monolog.logger.mailer" on-invalid="ignore"/>
     </service>
     <service id="mailer.transport_factory.smtp" class="Symfony\Component\Mailer\Transport\Smtp\EsmtpTransportFactory">
       <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="ignore"/>
+      <argument>null</argument>
       <argument type="service" id="monolog.logger.mailer" on-invalid="ignore"/>
     </service>
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator">
@@ -2211,333 +2211,335 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/translations</argument>
+        <argument key="cache_dir">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
           </argument>
           <argument key="be" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
           </argument>
           <argument key="bs" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.cy.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.cy.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.cy.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.et.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.hy.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
           </argument>
           <argument key="mk" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.mk.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.mk.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.mk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.mk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.mk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.mk.xlf</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
           </argument>
           <argument key="my" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.my.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.my.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.my.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.my.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.my.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.my.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.sq.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
           </argument>
           <argument key="tl" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
           </argument>
           <argument key="ur" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.ur.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.ur.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.ur.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.ur.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.ur.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.ur.xlf</argument>
           </argument>
           <argument key="uz" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.uz.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.uz.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.uz.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.uz.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.uz.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.uz.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
           </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\framework-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\debug-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\web-profiler-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\stimulus-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\ux-turbo/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\twig\extra-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\monolog-bundle\src/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\maker-bundle/translations</argument>
-          <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\framework-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\debug-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\web-profiler-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\stimulus-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\ux-turbo/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\twig\extra-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\monolog-bundle\src/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\maker-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
+          <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\nelmio\cors-bundle/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\validator/Resources/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\form/Resources/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-core/Resources/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\validator/Resources/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\form/Resources/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-core/Resources/translations</argument>
             <argument>translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\framework-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\debug-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\web-profiler-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\stimulus-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\ux-turbo/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\twig\extra-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\monolog-bundle\src/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\maker-bundle/translations</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\framework-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\debug-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\web-profiler-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\stimulus-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\ux-turbo/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\twig\extra-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\monolog-bundle\src/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\maker-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\nelmio\cors-bundle/translations</argument>
           </argument>
         </argument>
       </argument>
@@ -2876,7 +2878,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\ErrorHandler\ErrorRenderer\FileLinkFormatter">
       <argument>%env(default::SYMFONY_IDE)%</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument type="service_closure" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch" public="true">
@@ -2941,6 +2943,30 @@
           <argument>onKernelResponse</argument>
         </argument>
         <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="nelmio_cors.cors_listener"/>
+          <argument>onKernelRequest</argument>
+        </argument>
+        <argument>250</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.response</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="nelmio_cors.cors_listener"/>
+          <argument>onKernelResponse</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.response</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="nelmio_cors.cacheable_response_vary_listener"/>
+          <argument>onResponse</argument>
+        </argument>
+        <argument>-15</argument>
       </call>
       <call method="addListener">
         <argument>kernel.controller_arguments</argument>
@@ -3532,7 +3558,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.8JS6QTA"/>
+      <argument type="service" id=".service_locator.yMnRLvv"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -3605,7 +3631,13 @@
     </service>
     <service id="routing.loader.attribute.services" class="Symfony\Component\Routing\Loader\AttributeServicesLoader">
       <tag name="routing.loader" priority="-10"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument>App\Controller\Api\ApiCharacterController</argument>
+        <argument>App\Controller\Api\ApiClassController</argument>
+        <argument>App\Controller\Api\ApiPartyController</argument>
+        <argument>App\Controller\Api\ApiRaceController</argument>
+        <argument>App\Controller\Api\ApiSkillController</argument>
+      </argument>
     </service>
     <service id="routing.loader.attribute.directory" class="Symfony\Component\Routing\Loader\AttributeDirectoryLoader">
       <tag name="routing.loader" priority="-10"/>
@@ -3631,10 +3663,10 @@
     <service id="router.default" class="Symfony\Bundle\FrameworkBundle\Routing\Router">
       <tag name="monolog.logger" channel="router"/>
       <tag name="container.service_subscriber" id="routing.loader"/>
-      <argument type="service" id=".service_locator.xdLQ5FJ.router.default"/>
+      <argument type="service" id=".service_locator.mVqIsAD.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev</argument>
+        <argument key="cache_dir">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -3685,7 +3717,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -3712,7 +3744,7 @@
       <argument type="service" id="property_info.reflection_extractor" on-invalid="null"/>
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
       <argument>APP_SECRET</argument>
     </service>
@@ -3725,7 +3757,7 @@
       <argument>base64:default::SYMFONY_DECRYPTION_SECRET</argument>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/.env.dev.local</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/.env.dev.local</argument>
     </service>
     <service id="serializer.mapping.class_discriminator_resolver" class="Symfony\Component\Serializer\Mapping\ClassDiscriminatorFromClassMetadata">
       <argument type="service" id="serializer.mapping.class_metadata_factory"/>
@@ -3835,10 +3867,10 @@
       <argument type="collection">
         <argument type="service" id="serializer.mapping.attribute_loader"/>
       </argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/serialization.php</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/serialization.php</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -4062,7 +4094,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/sessions</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -4292,10 +4324,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/validation.php</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" constructor="create">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/validation.php</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory">
@@ -4597,7 +4629,7 @@
     </service>
     <service id="validator.not_compromised_password" class="Symfony\Component\Validator\Constraints\NotCompromisedPasswordValidator">
       <tag name="validator.constraint_validator"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="null"/>
+      <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -4935,13 +4967,13 @@
     </service>
     <service id="notifier.transport_factory.abstract" class="Symfony\Component\Notifier\Transport\AbstractTransportFactory" abstract="true">
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="ignore"/>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
     </service>
     <service id="notifier.transport_factory.null" class="Symfony\Component\Notifier\Transport\NullTransportFactory">
       <tag name="chatter.transport_factory"/>
       <tag name="texter.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument type="service" id="http_client.uri_template" on-invalid="ignore"/>
+      <argument>null</argument>
     </service>
     <service id="notifier.admin_recipient.0" class="Symfony\Component\Notifier\Recipient\Recipient">
       <argument>admin@example.com</argument>
@@ -5000,9 +5032,6 @@
         <argument type="service" id="data_collector.twig"/>
       </call>
       <call method="add">
-        <argument type="service" id="data_collector.http_client"/>
-      </call>
-      <call method="add">
         <argument type="service" id="data_collector.doctrine"/>
       </call>
       <call method="add">
@@ -5025,7 +5054,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/profiler</argument>
+      <argument>file:C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.reset" method="?reset"/>
@@ -5106,7 +5135,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id=".virtual_request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -5154,10 +5183,6 @@
       <call method="addInstance">
         <argument>cache.messenger.restart_workers_signal</argument>
         <argument type="service" id="cache.messenger.restart_workers_signal"/>
-      </call>
-      <call method="addInstance">
-        <argument>cache.http_client.pool</argument>
-        <argument type="service" id="cache.http_client.pool"/>
       </call>
       <call method="addInstance">
         <argument>cache.validator_expression_language</argument>
@@ -5229,13 +5254,6 @@
     <service id="mailer.data_collector" class="Symfony\Component\Mailer\DataCollector\MessageDataCollector">
       <tag name="data_collector" template="@WebProfiler/Collector/mailer.html.twig" id="mailer"/>
       <argument type="service" id="mailer.message_logger_listener"/>
-    </service>
-    <service id="data_collector.http_client" class="Symfony\Component\HttpClient\DataCollector\HttpClientDataCollector">
-      <tag name="data_collector" template="@WebProfiler/Collector/http_client.html.twig" id="http_client" priority="250"/>
-      <call method="registerClient">
-        <argument>http_client</argument>
-        <argument type="service" id=".debug.http_client"/>
-      </call>
     </service>
     <service id="notifier.data_collector" class="Symfony\Component\Notifier\DataCollector\NotificationDataCollector">
       <tag name="data_collector" template="@WebProfiler/Collector/notifier.html.twig" id="notifier"/>
@@ -5747,7 +5765,7 @@
     </service>
     <service id="doctrine.orm.default_attribute_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AttributeDriver">
       <argument type="collection">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\src\Entity</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\src\Entity</argument>
       </argument>
     </service>
     <service id="cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
@@ -5812,7 +5830,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul/migrations</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -6044,7 +6062,7 @@
         <argument key="source" type="service">
           <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
             <argument>UTF-8</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
             <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
           </service>
         </argument>
@@ -6066,7 +6084,7 @@
         <argument key="source" type="service">
           <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
             <argument>UTF-8</argument>
-            <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+            <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
             <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
           </service>
         </argument>
@@ -6131,7 +6149,7 @@
       <tag name="kernel.reset" method="?resetGlobals"/>
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
-        <argument key="cache">C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/twig</argument>
+        <argument key="cache">C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -6256,10 +6274,10 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
-        <argument key="C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
+        <argument key="C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/templates</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/templates</argument>
       <argument type="collection">
         <argument>*.twig</argument>
       </argument>
@@ -6274,76 +6292,76 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-bundle/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-bundle/templates</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-bundle/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-bundle/templates</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-migrations-bundle/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-migrations-bundle/templates</argument>
         <argument>DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\doctrine\doctrine-migrations-bundle/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\doctrine\doctrine-migrations-bundle/templates</argument>
         <argument>!DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\ux-turbo/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\ux-turbo/templates</argument>
         <argument>Turbo</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\ux-turbo/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\ux-turbo/templates</argument>
         <argument>!Turbo</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\maker-bundle/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\maker-bundle/templates</argument>
         <argument>Maker</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\maker-bundle/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\maker-bundle/templates</argument>
         <argument>!Maker</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul/templates</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/templates</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>!email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader"/>
@@ -6456,9 +6474,9 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/templates</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -6507,7 +6525,7 @@
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -6550,7 +6568,7 @@
     <service id="twig.extension.code" class="Symfony\Bundle\WebProfilerBundle\Profiler\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener">
@@ -6573,7 +6591,7 @@
       <argument type="service" id="stimulus.helper"/>
     </service>
     <service id="stimulus.asset_mapper.ux_package_reader" class="Symfony\UX\StimulusBundle\Ux\UxPackageReader">
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
     </service>
     <service id="stimulus.ux_controllers_twig_extension" class="Symfony\UX\StimulusBundle\Twig\UxControllersTwigExtension">
       <tag name="twig.extension"/>
@@ -6583,15 +6601,15 @@
       <argument type="service" id="stimulus.asset_mapper.controllers_map_generator"/>
       <argument type="service" id="asset_mapper"/>
       <argument type="service" id="stimulus.asset_mapper.ux_package_reader"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
     </service>
     <service id="stimulus.asset_mapper.controllers_map_generator" class="Symfony\UX\StimulusBundle\AssetMapper\ControllersMapGenerator">
       <argument type="service" id="asset_mapper"/>
       <argument type="service" id="stimulus.asset_mapper.ux_package_reader"/>
       <argument type="collection">
-        <argument>C:\Users\comra\PhpstormProjects\projetmoncul/assets/controllers</argument>
+        <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/assets/controllers</argument>
       </argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/assets/controllers.json</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/assets/controllers.json</argument>
       <argument type="service" id="stimulus.asset_mapper.auto_import_locator" on-invalid="null"/>
     </service>
     <service id="stimulus.asset_mapper.auto_import_locator" class="Symfony\UX\StimulusBundle\AssetMapper\AutoImportLocator">
@@ -7063,7 +7081,7 @@
     </service>
     <service id="security.access_token_handler.oidc_user_info.http_client" class="Symfony\Contracts\HttpClient\HttpClientInterface" abstract="true">
       <argument type="abstract">http client options</argument>
-      <factory service="http_client.uri_template" method="withOptions"/>
+      <factory service="http_client" method="withOptions"/>
     </service>
     <service id="security.access_token_handler.oidc_user_info" class="Symfony\Component\Security\Http\AccessToken\Oidc\OidcUserInfoTokenHandler" abstract="true">
       <argument type="abstract">http client</argument>
@@ -7081,7 +7099,7 @@
     </service>
     <service id="security.access_token_handler.oidc_discovery.http_client" class="Symfony\Contracts\HttpClient\HttpClientInterface" abstract="true">
       <argument type="abstract">http client options</argument>
-      <factory service="http_client.uri_template" method="withOptions"/>
+      <factory service="http_client" method="withOptions"/>
     </service>
     <service id="security.access_token_handler.oidc.jwk" class="Jose\Component\Core\JWK" constructor="createFromJson" abstract="true">
       <argument type="abstract">signature key</argument>
@@ -7159,7 +7177,7 @@
       <tag name="security.access_token_handler.oidc.encryption_algorithm"/>
     </service>
     <service id="security.access_token_handler.oauth2" class="Symfony\Component\Security\Http\AccessToken\OAuth2\Oauth2TokenHandler" abstract="true">
-      <argument type="service" id="http_client.uri_template"/>
+      <argument type="service" id="http_client"/>
       <argument type="service" id="monolog.logger" on-invalid="null"/>
     </service>
     <service id="security.access_token_handler.oidc.generator" class="Symfony\Component\Security\Http\AccessToken\Oidc\OidcTokenGenerator" abstract="true">
@@ -7413,7 +7431,7 @@
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
       <tag name="kernel.reset" method="reset"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\log/dev.log</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\var\log/dev.log</argument>
       <argument>debug</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -7436,8 +7454,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/templates</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -7614,7 +7632,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge</argument>
       <argument type="service" id="maker.file_link_formatter"/>
     </service>
     <service id="maker.maker.make_stimulus_controller" class="Symfony\Bundle\MakerBundle\Maker\MakeStimulusController">
@@ -7661,6 +7679,47 @@
     <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
       <tag name="doctrine.fixtures.purger_factory" alias="default"/>
     </service>
+    <service id="nelmio_cors.cors_listener" class="Nelmio\CorsBundle\EventListener\CorsListener">
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" priority="250"/>
+      <tag name="kernel.event_listener" event="kernel.response" method="onKernelResponse" priority="0"/>
+      <tag name="container.hot_path"/>
+      <tag name="container.hot_path"/>
+      <argument type="service" id="nelmio_cors.options_resolver"/>
+    </service>
+    <service id="nelmio_cors.options_resolver" class="Nelmio\CorsBundle\Options\Resolver">
+      <argument type="collection">
+        <argument type="service" id="nelmio_cors.options_provider.config"/>
+      </argument>
+    </service>
+    <service id="nelmio_cors.options_provider.config" class="Nelmio\CorsBundle\Options\ConfigProvider">
+      <tag name="nelmio_cors.options_provider" priority="-1"/>
+      <argument>%nelmio_cors.map%</argument>
+      <argument>%nelmio_cors.defaults%</argument>
+    </service>
+    <service id="nelmio_cors.cacheable_response_vary_listener" class="Nelmio\CorsBundle\EventListener\CacheableResponseVaryListener">
+      <tag name="kernel.event_listener" event="kernel.response" method="onResponse" priority="-15"/>
+      <tag name="container.hot_path"/>
+    </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\Api\ApiCharacterController.0.App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\ApiClassController" class="App\Controller\Api\ApiClassController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\ApiClassController" class="App\Controller\Api\ApiClassController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\Api\ApiClassController.0.App\Controller\Api\ApiClassController" class="App\Controller\Api\ApiClassController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Api\ApiClassController" class="App\Controller\Api\ApiClassController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\ApiPartyController" class="App\Controller\Api\ApiPartyController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\ApiPartyController" class="App\Controller\Api\ApiPartyController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\Api\ApiPartyController.0.App\Controller\Api\ApiPartyController" class="App\Controller\Api\ApiPartyController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Api\ApiPartyController" class="App\Controller\Api\ApiPartyController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\ApiRaceController" class="App\Controller\Api\ApiRaceController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\ApiRaceController" class="App\Controller\Api\ApiRaceController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\Api\ApiRaceController.0.App\Controller\Api\ApiRaceController" class="App\Controller\Api\ApiRaceController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Api\ApiRaceController" class="App\Controller\Api\ApiRaceController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\Api\ApiSkillController.0.App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.App\Entity\Character.0.App\Entity\Character" class="App\Entity\Character" autowire="true" abstract="true"/>
@@ -8205,15 +8264,123 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.1vYpZ1B" method="withContext"/>
     </service>
-    <service id=".service_locator.8JS6QTA" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.BDlMk_E" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="characterRepository" type="service_closure" id="App\Repository\CharacterRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.BDlMk_E.App\Controller\Api\ApiCharacterController::list()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiCharacterController::list()"/>
+      <argument>App\Controller\Api\ApiCharacterController::list()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.BDlMk_E" method="withContext"/>
+    </service>
+    <service id=".service_locator.z0A7H.F" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.z0A7H.F.App\Controller\Api\ApiCharacterController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiCharacterController::show()"/>
+      <argument>App\Controller\Api\ApiCharacterController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.z0A7H.F" method="withContext"/>
+    </service>
+    <service id=".service_locator.9nerQqG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="classRepository" type="service_closure" id="App\Repository\CharacterCLassRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::list()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiClassController::list()"/>
+      <argument>App\Controller\Api\ApiClassController::list()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.9nerQqG" method="withContext"/>
+    </service>
+    <service id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiClassController::show()"/>
+      <argument>App\Controller\Api\ApiClassController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.9nerQqG" method="withContext"/>
+    </service>
+    <service id=".service_locator.bL3Pl7Q" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="partyRepository" type="service_closure" id="App\Repository\PartyRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.bL3Pl7Q.App\Controller\Api\ApiPartyController::list()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiPartyController::list()"/>
+      <argument>App\Controller\Api\ApiPartyController::list()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.bL3Pl7Q" method="withContext"/>
+    </service>
+    <service id=".service_locator.bL3Pl7Q.App\Controller\Api\ApiPartyController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiPartyController::show()"/>
+      <argument>App\Controller\Api\ApiPartyController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.bL3Pl7Q" method="withContext"/>
+    </service>
+    <service id=".service_locator.VjnedoE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="raceRepository" type="service_closure" id="App\Repository\RaceRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::list()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiRaceController::list()"/>
+      <argument>App\Controller\Api\ApiRaceController::list()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.VjnedoE" method="withContext"/>
+    </service>
+    <service id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiRaceController::show()"/>
+      <argument>App\Controller\Api\ApiRaceController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.VjnedoE" method="withContext"/>
+    </service>
+    <service id=".service_locator.AO_qz9R" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="skillRepository" type="service_closure" id="App\Repository\SkillRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.AO_qz9R.App\Controller\Api\ApiSkillController::list()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiSkillController::list()"/>
+      <argument>App\Controller\Api\ApiSkillController::list()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.AO_qz9R" method="withContext"/>
+    </service>
+    <service id=".service_locator.yMnRLvv" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.1vYpZ1B.kernel::loadRoutes()"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.1vYpZ1B.kernel::loadRoutes()"/>
+        <argument key="App\Controller\Api\ApiCharacterController::list" type="service_closure" id=".service_locator.BDlMk_E.App\Controller\Api\ApiCharacterController::list()"/>
+        <argument key="App\Controller\Api\ApiCharacterController::show" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\Api\ApiCharacterController::show()"/>
+        <argument key="App\Controller\Api\ApiClassController::list" type="service_closure" id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::list()"/>
+        <argument key="App\Controller\Api\ApiClassController::show" type="service_closure" id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::show()"/>
+        <argument key="App\Controller\Api\ApiPartyController::list" type="service_closure" id=".service_locator.bL3Pl7Q.App\Controller\Api\ApiPartyController::list()"/>
+        <argument key="App\Controller\Api\ApiPartyController::show" type="service_closure" id=".service_locator.bL3Pl7Q.App\Controller\Api\ApiPartyController::show()"/>
+        <argument key="App\Controller\Api\ApiRaceController::list" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::list()"/>
+        <argument key="App\Controller\Api\ApiRaceController::show" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::show()"/>
+        <argument key="App\Controller\Api\ApiSkillController::list" type="service_closure" id=".service_locator.AO_qz9R.App\Controller\Api\ApiSkillController::list()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.1vYpZ1B.kernel::loadRoutes()"/>
+        <argument key="App\Controller\Api\ApiCharacterController:list" type="service_closure" id=".service_locator.BDlMk_E.App\Controller\Api\ApiCharacterController::list()"/>
+        <argument key="App\Controller\Api\ApiCharacterController:show" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\Api\ApiCharacterController::show()"/>
+        <argument key="App\Controller\Api\ApiClassController:list" type="service_closure" id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::list()"/>
+        <argument key="App\Controller\Api\ApiClassController:show" type="service_closure" id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::show()"/>
+        <argument key="App\Controller\Api\ApiPartyController:list" type="service_closure" id=".service_locator.bL3Pl7Q.App\Controller\Api\ApiPartyController::list()"/>
+        <argument key="App\Controller\Api\ApiPartyController:show" type="service_closure" id=".service_locator.bL3Pl7Q.App\Controller\Api\ApiPartyController::show()"/>
+        <argument key="App\Controller\Api\ApiRaceController:list" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::list()"/>
+        <argument key="App\Controller\Api\ApiRaceController:show" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::show()"/>
+        <argument key="App\Controller\Api\ApiSkillController:list" type="service_closure" id=".service_locator.AO_qz9R.App\Controller\Api\ApiSkillController::list()"/>
       </argument>
     </service>
     <service id=".service_locator.S9tnIXR" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -8461,10 +8628,6 @@
         <argument key="sign">true</argument>
       </argument>
     </service>
-    <service id=".messenger.handler_descriptor.Qv3faSN" class="Symfony\Component\Messenger\Handler\HandlerDescriptor">
-      <argument type="service" id="http_client.messenger.ping_webhook_handler"/>
-      <argument type="collection"/>
-    </service>
     <service id=".messenger.handler_descriptor.WG.oRBv" class="Symfony\Component\Messenger\Handler\HandlerDescriptor">
       <argument type="service" id="mailer.messenger.message_handler"/>
       <argument type="collection"/>
@@ -8510,9 +8673,6 @@
         <argument key="Symfony\Component\Console\Messenger\RunCommandMessage" type="iterator">
           <argument type="service" id=".messenger.handler_descriptor.NumTeF8"/>
         </argument>
-        <argument key="Symfony\Component\HttpClient\Messenger\PingWebhookMessage" type="iterator">
-          <argument type="service" id=".messenger.handler_descriptor.Qv3faSN"/>
-        </argument>
         <argument key="Symfony\Component\Mailer\Messenger\SendEmailMessage" type="iterator">
           <argument type="service" id=".messenger.handler_descriptor.WG.oRBv"/>
         </argument>
@@ -8532,11 +8692,6 @@
           <argument type="service" id=".messenger.handler_descriptor.Dkv9sRY"/>
         </argument>
       </argument>
-    </service>
-    <service id=".debug.http_client" class="Symfony\Component\HttpClient\TraceableHttpClient">
-      <argument type="service" id=".debug.http_client.inner"/>
-      <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
-      <argument type="service" id="profiler.is_disabled_state_checker" on-invalid="ignore"/>
     </service>
     <service id=".service_locator.fipAWQf" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -8683,17 +8838,6 @@
       </call>
       <configurator service="debug.debug_logger_configurator" method="pushDebugLogger"/>
     </service>
-    <service id="monolog.logger.http_client" class="Monolog\Logger">
-      <tag name="monolog.channel_logger"/>
-      <argument>http_client</argument>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.console"/>
-      </call>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.main"/>
-      </call>
-      <configurator service="debug.debug_logger_configurator" method="pushDebugLogger"/>
-    </service>
     <service id="monolog.logger.mailer" class="Monolog\Logger">
       <tag name="monolog.channel_logger"/>
       <argument>mailer</argument>
@@ -8827,6 +8971,36 @@
         <argument key="web_link.http_header_serializer" type="service_closure" id="web_link.http_header_serializer" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\Api\ApiCharacterController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiCharacterController"/>
+      <argument>App\Controller\Api\ApiCharacterController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\Api\ApiClassController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiClassController"/>
+      <argument>App\Controller\Api\ApiClassController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\Api\ApiPartyController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiPartyController"/>
+      <argument>App\Controller\Api\ApiPartyController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\Api\ApiRaceController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiRaceController"/>
+      <argument>App\Controller\Api\ApiRaceController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\Api\ApiSkillController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Api\ApiSkillController"/>
+      <argument>App\Controller\Api\ApiSkillController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
     <service id=".service_locator.TJNRSaV.controller.helper" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="controller.helper"/>
       <argument>controller.helper</argument>
@@ -8845,17 +9019,17 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.kvOAK9B" method="withContext"/>
     </service>
-    <service id=".service_locator.xdLQ5FJ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.mVqIsAD" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="routing.loader" type="service_closure" id="routing.loader"/>
       </argument>
     </service>
-    <service id=".service_locator.xdLQ5FJ.router.default" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.mVqIsAD.router.default" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="router.default"/>
       <argument>router.default</argument>
       <argument type="service" id="service_container"/>
-      <factory service=".service_locator.xdLQ5FJ" method="withContext"/>
+      <factory service=".service_locator.mVqIsAD" method="withContext"/>
     </service>
     <service id=".service_locator.mFBT25N" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -8910,11 +9084,10 @@
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id=".service_locator.6eloqTE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.YDYHnos" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="cache.app" type="service_closure" id="cache.app.taggable"/>
-        <argument key="cache.http_client.pool" type="service_closure" id="cache.http_client"/>
       </argument>
     </service>
     <service id=".service_locator.GW5y7PS" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -8997,16 +9170,10 @@
     <service id="debug.validator.inner" class="Symfony\Component\Validator\Validator\ValidatorInterface">
       <factory service="validator.builder" method="getValidator"/>
     </service>
-    <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
-      <argument type="collection">
-        <argument type="service" id="http_client.transport"/>
-      </argument>
-      <factory function="current"/>
-    </service>
     <service id="asset_mapper.cached_mapped_asset_factory.inner" class="Symfony\Component\AssetMapper\Factory\MappedAssetFactory">
       <argument type="service" id="asset_mapper.public_assets_path_resolver"/>
       <argument type="service" id="asset_mapper_compiler"/>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul/assets/vendor</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/assets/vendor</argument>
     </service>
     <service id="asset_mapper.asset_package.inner" class="Symfony\Component\Asset\PathPackage">
       <argument/>
@@ -9026,6 +9193,11 @@
       <call method="allowControllers">
         <argument type="collection">
           <argument>App\Kernel</argument>
+          <argument>App\Controller\Api\ApiCharacterController</argument>
+          <argument>App\Controller\Api\ApiClassController</argument>
+          <argument>App\Controller\Api\ApiPartyController</argument>
+          <argument>App\Controller\Api\ApiRaceController</argument>
+          <argument>App\Controller\Api\ApiSkillController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
       </call>
@@ -10225,103 +10397,94 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>NDnnoQ3ZKC</argument>
+      <argument>NAw39oKyb-</argument>
       <argument>0</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\share\dev/pools/app</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\var\share\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>g66tzqIm5w</argument>
+      <argument>15dysnkpwq</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>w9-IMcB75c</argument>
+      <argument>HVpqMRf6YW</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>Rj4d8cgM9J</argument>
+      <argument>w2JLoq-rNP</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>MRlENJxZY7</argument>
+      <argument>EVdZ27TW0n</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.asset_mapper.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>nn7dLa0yLX</argument>
+      <argument>Oq7VJbUa0b</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.messenger.restart_workers_signal.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>Bf3A8nsnYy</argument>
+      <argument>nb6Vaj64VH</argument>
       <argument>0</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\share\dev/pools/app</argument>
-      <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
-      <call method="setLogger">
-        <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
-      </call>
-    </service>
-    <service id="cache.http_client.pool.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>H6pck5ucxl</argument>
-      <argument>0</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\share\dev/pools/app</argument>
+      <argument>C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge\var\share\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.validator_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>H-CTYLy4-B</argument>
+      <argument>eWny+YCrp4</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>RYOknrETq7</argument>
+      <argument>lnyJfP4Iya</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.security_is_granted_attribute_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>NTaCUciM4r</argument>
+      <argument>ls5HBuQTRd</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.security_is_csrf_token_valid_attribute_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>2zECJ4lupl</argument>
+      <argument>eK8-ZXir6B</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\comra\PhpstormProjects\projetmoncul\var\cache\dev/pools/system</argument>
+      <argument>C:/Users/lucac/Desktop/Cours/web/Forge de heros/projet-hero-forge/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -10374,10 +10537,8 @@
     <service id="Symfony\Contracts\Translation\TranslatorInterface" alias="translator.data_collector"/>
     <service id="Symfony\Component\Asset\Packages" alias="assets.packages"/>
     <service id="Symfony\Component\AssetMapper\AssetMapperInterface" alias="asset_mapper"/>
-    <service id="asset_mapper.http_client" alias="http_client.uri_template"/>
     <service id="Symfony\Component\AssetMapper\ImportMap\ImportMapManager" alias="asset_mapper.importmap.manager"/>
     <service id="Symfony\Component\AssetMapper\Compressor\CompressorInterface" alias="asset_mapper.compressor"/>
-    <service id="Symfony\Contracts\HttpClient\HttpClientInterface" alias="http_client.uri_template"/>
     <service id="mailer" alias="mailer.mailer"/>
     <service id="Symfony\Component\Mailer\MailerInterface" alias="mailer.mailer"/>
     <service id="mailer.default_transport" alias="mailer.transports"/>
@@ -10488,7 +10649,7 @@
     <service id="doctrine.fixtures.provider" alias="doctrine.fixtures.loader"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.ryAvHi4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.8JS6QTA"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.yMnRLvv"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.W55Po6X"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".Psr\Log\LoggerInterface $request.logger" alias="monolog.logger.request"/>
@@ -10501,8 +10662,6 @@
     <service id="Psr\Log\LoggerInterface $cacheLogger" alias="monolog.logger.cache"/>
     <service id=".Psr\Log\LoggerInterface $asset_mapper.logger" alias="monolog.logger.asset_mapper"/>
     <service id="Psr\Log\LoggerInterface $assetMapperLogger" alias="monolog.logger.asset_mapper"/>
-    <service id=".Psr\Log\LoggerInterface $http_client.logger" alias="monolog.logger.http_client"/>
-    <service id="Psr\Log\LoggerInterface $httpClientLogger" alias="monolog.logger.http_client"/>
     <service id=".Psr\Log\LoggerInterface $mailer.logger" alias="monolog.logger.mailer"/>
     <service id="Psr\Log\LoggerInterface $mailerLogger" alias="monolog.logger.mailer"/>
     <service id=".Psr\Log\LoggerInterface $translation.logger" alias="monolog.logger.translation"/>
@@ -10526,8 +10685,6 @@
     <service id=".service_locator.O8.cMm9" alias="messenger.receiver_locator"/>
     <service id=".service_locator.oeWXF0n" alias="messenger.retry_strategy_locator"/>
     <service id="validator" alias="debug.validator"/>
-    <service id="http_client" alias="http_client.uri_template"/>
-    <service id="http_client.uri_template.inner" alias=".debug.http_client"/>
     <service id="asset_mapper.mapped_asset_factory" alias="asset_mapper.cached_mapped_asset_factory"/>
     <service id="assets._default_package" alias="asset_mapper.asset_package"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
@@ -10546,6 +10703,12 @@
     <service id=".signing.messenger.default_serializer.inner" alias="messenger.transport.native_php_serializer"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.c0wzfI4" alias=".service_locator.1vYpZ1B"/>
+    <service id=".service_locator.vmqIClB" alias=".service_locator.BDlMk_E"/>
+    <service id=".service_locator.0ekWYPZ" alias=".service_locator.z0A7H.F"/>
+    <service id=".service_locator.Z9qb75L" alias=".service_locator.9nerQqG"/>
+    <service id=".service_locator.SU6eLUP" alias=".service_locator.bL3Pl7Q"/>
+    <service id=".service_locator.Tpc8tJO" alias=".service_locator.VjnedoE"/>
+    <service id=".service_locator..B7HT0n" alias=".service_locator.AO_qz9R"/>
     <service id=".service_locator.D6tJ4Px" alias=".service_locator.TJNRSaV"/>
   </services>
 </container>

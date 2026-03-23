@@ -16,28 +16,38 @@ class CharacterRepository extends ServiceEntityRepository
         parent::__construct($registry, Character::class);
     }
 
-    //    /**
-    //     * @return Character[] Returns an array of Character objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('c')
-    //            ->andWhere('c.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('c.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    public function findByFilters(?string $name, ?string $race, ?string $class): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
 
-    //    public function findOneBySomeField($value): ?Character
-    //    {
-    //        return $this->createQueryBuilder('c')
-    //            ->andWhere('c.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        $sql = '
+            SELECT c.id, c.name, c.level, c.str, c.dex, c.con, c.int, c.wis, c.cha,
+                   c.hit_points, c.image,
+                   r.name as race_name, r.id as race_id,
+                   cl.name as class_name, cl.id as class_id, cl.hit_dice
+            FROM character c
+            LEFT JOIN race r ON c.id_race_id = r.id
+            LEFT JOIN character_class cl ON c.class_id_id = cl.id
+            WHERE 1=1
+        ';
+
+        $params = [];
+
+        if ($name) {
+            $sql .= ' AND c.name LIKE :name';
+            $params['name'] = '%' . $name . '%';
+        }
+
+        if ($race) {
+            $sql .= ' AND r.name LIKE :race';
+            $params['race'] = '%' . $race . '%';
+        }
+
+        if ($class) {
+            $sql .= ' AND cl.name LIKE :class';
+            $params['class'] = '%' . $class . '%';
+        }
+
+        return $conn->executeQuery($sql, $params)->fetchAllAssociative();
+    }
 }
