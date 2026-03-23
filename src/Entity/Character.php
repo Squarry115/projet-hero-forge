@@ -59,6 +59,10 @@ class Character
     #[ORM\ManyToMany(targetEntity: Party::class, mappedBy: 'characters')]
     private Collection $parties;
 
+    #[ORM\ManyToOne(inversedBy: 'char_id')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?CharacterCLass $class_id = null;
+
     public function __construct()
     {
         $this->parties = new ArrayCollection();
@@ -236,6 +240,18 @@ class Character
         if ($this->parties->removeElement($party)) {
             $party->removeCharacter($this);
         }
+
+        return $this;
+    }
+
+    public function getClassId(): ?CharacterCLass
+    {
+        return $this->class_id;
+    }
+
+    public function setClassId(?CharacterCLass $class_id): static
+    {
+        $this->class_id = $class_id;
 
         return $this;
     }

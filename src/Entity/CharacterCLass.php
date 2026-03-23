@@ -30,9 +30,16 @@ class CharacterCLass
     #[ORM\OneToMany(targetEntity: Skill::class, mappedBy: 'id_class', orphanRemoval: true)]
     private Collection $skills;
 
+    /**
+     * @var Collection<int, Character>
+     */
+    #[ORM\OneToMany(targetEntity: Character::class, mappedBy: 'class_id', orphanRemoval: true)]
+    private Collection $char_id;
+
     public function __construct()
     {
         $this->skills = new ArrayCollection();
+        $this->char_id = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -100,6 +107,36 @@ class CharacterCLass
             // set the owning side to null (unless already changed)
             if ($skill->getIdClass() === $this) {
                 $skill->setIdClass(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Character>
+     */
+    public function getCharId(): Collection
+    {
+        return $this->char_id;
+    }
+
+    public function addCharId(Character $charId): static
+    {
+        if (!$this->char_id->contains($charId)) {
+            $this->char_id->add($charId);
+            $charId->setClassId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCharId(Character $charId): static
+    {
+        if ($this->char_id->removeElement($charId)) {
+            // set the owning side to null (unless already changed)
+            if ($charId->getClassId() === $this) {
+                $charId->setClassId(null);
             }
         }
 
