@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ party.name }}{% endblock %}
+
+{% block body %}
+<a href="{{ path('app_party_index') }}">← Retour aux groupes</a>
+
+<h1>{{ party.name }}</h1>
+<p>{{ party.description }}</p>
+
+{% set memberCount = party.characters|length %}
+{% set isFull = memberCount >= party.maxSize %}
+
+<p>
+    Membres : <strong>{{ memberCount }} / {{ party.maxSize }}</strong>
+    {% if isFull %}
+        <span style="color:red;">[COMPLET]</span>
+    {% else %}
+        <span style="color:green;">[{{ party.maxSize - memberCount }} place(s) disponible(s)]</span>
+    {% endif %}
+</p>
+
+<h3>Membres actuels</h3>
+{% if party.characters is empty %}
+    <p>Aucun membre pour l'instant.</p>
+{% else %}
+    <ul>
+        {% for character in party.characters %}
+            <li>
+                {{ character.name }}
+                {% if character.idUser == app.user %}
+                    <form method="post" action="{{ path('app_party_leave', {id: party.id, characterId: character.id}) }}" style="display:inline">
+                        <input type="hidden" name="_token" value="{{ csrf_token('leave') }}">
+                        <button type="submit">Quitter</button>
+                    </form>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if not isFull and myCharacters is not empty %}
+    <h3>Inscrire un de mes personnages</h3>
+    {% for character in myCharacters %}
+        {% if character not in party.characters %}
+            <form method="post" action="{{ path('app_party_join', {id: party.id, characterId: character.id}) }}" style="display:inline">
+                <input type="hidden" name="_token" value="{{ csrf_token('join') }}">
+                <button type="submit">{{ character.getName() }} rejoindre</button>
+            </form>
+        {% endif %}
+    {% endfor %}
+{% elseif isFull %}
+    <p><em>Ce groupe est complet.</em></p>
+{% endif %}
+
+{% endblock %}

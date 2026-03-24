@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ character.name }}{% endblock %}
+
+{% block body %}
+<a href="{{ path('app_character_index') }}">← Retour</a>
+
+<h1>{{ character.name }}</h1>
+
+{% if character.image %}
+    <img src="{{ asset('uploads/characters/' ~ character.image) }}" alt="{{ character.name }}" style="width:150px; height:150px; border-radius:50%;">
+{% endif %}
+
+<p><strong>Niveau :</strong> {{ character.level }}</p>
+<p><strong>Race :</strong> {{ character.race_name ?? '?' }}</p>
+<p><strong>Classe :</strong> {{ character.class_name ?? '?' }}</p>
+<p><strong>Points de vie :</strong> {{ character.hit_points }}</p>
+
+<h3>Caractéristiques</h3>
+<ul>
+    <li>Force (STR) : {{ character.str }}</li>
+    <li>Dextérité (DEX) : {{ character.dex }}</li>
+    <li>Constitution (CON) : {{ character.con }}</li>
+    <li>Intelligence (INT) : {{ character.int }}</li>
+    <li>Sagesse (WIS) : {{ character.wis }}</li>
+    <li>Charisme (CHA) : {{ character.cha }}</li>
+</ul>
+
+<h3>Groupes d'aventure</h3>
+{% if parties is empty %}
+    <p>Ce personnage n'appartient à aucun groupe.</p>
+{% else %}
+    <ul>
+        {% for party in parties %}
+            <li>{{ party.name }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<a href="{{ path('app_character_edit', {id: character.id}) }}">Modifier</a>
+{% endblock %}

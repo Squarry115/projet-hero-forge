@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Races{% endblock %}
+
+{% block body %}
+<h1>Races</h1>
+<a href="{{ path('admin_race_new') }}">+ Nouvelle race</a>
+<a href="{{ path('app_admin') }}">← Dashboard</a>
+<hr>
+<table border="1" cellpadding="8">
+    <thead><tr><th>Nom</th><th>Description</th><th>Actions</th></tr></thead>
+    <tbody>
+        {% for race in races %}
+        <tr>
+            <td>{{ race.name }}</td>
+            <td>{{ race.description }}</td>
+            <td>
+                <a href="{{ path('admin_race_edit', {id: race.id}) }}">Modifier</a>
+                <form method="post" action="{{ path('admin_race_delete', {id: race.id}) }}" style="display:inline" onsubmit="return confirm('Supprimer ?')">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ race.id) }}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

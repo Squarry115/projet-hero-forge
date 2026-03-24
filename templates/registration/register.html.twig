@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription - Forge de Héros{% endblock %}
+
+{% block body %}
+<h1>Créer un compte</h1>
+
+{{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.username) }}
+    {{ form_row(registrationForm.plainPassword) }}
+    <button type="submit">S'inscrire</button>
+{{ form_end(registrationForm) }}
+
+<p>Déjà un compte ? <a href="{{ path('app_login') }}">Se connecter</a></p>
+{% endblock %}

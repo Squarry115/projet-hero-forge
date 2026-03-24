@@ -141,6 +141,7 @@
         <parameter key="all">true</parameter>
       </parameter>
     </parameter>
+    <parameter key="characters_images_directory">C:\Users\lucac\Desktop\Cours\web\Forge de heros\projet-hero-forge/public/uploads/characters</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -401,6 +402,14 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\AdminController" class="App\Controller\AdminController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\AdminController"/>
+      </call>
+    </service>
     <service id="App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="routing.controller"/>
@@ -441,6 +450,46 @@
         <argument type="service" id=".service_locator.TJNRSaV.App\Controller\Api\ApiSkillController"/>
       </call>
     </service>
+    <service id="App\Controller\CharacterController" class="App\Controller\CharacterController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\CharacterController"/>
+      </call>
+    </service>
+    <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\HomeController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PartyController" class="App\Controller\PartyController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\PartyController"/>
+      </call>
+    </service>
+    <service id="App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\RegistrationController"/>
+      </call>
+    </service>
+    <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="routing.controller"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.TJNRSaV.App\Controller\SecurityController"/>
+      </call>
+    </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
       <argument type="service" id="security.password_hasher_factory"/>
@@ -468,6 +517,24 @@
     <service id="App\Entity\User" class="App\Entity\User" autowire="true" autoconfigure="true">
       <tag name="container.excluded" source="because it's a Doctrine entity"/>
       <tag name="container.excluded" source="with #[Doctrine\ORM\Mapping\Entity] attribute"/>
+    </service>
+    <service id="App\Form\CharacterClassFormType" class="App\Form\CharacterClassFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type" csrf_token_id="%.form.type_extension.csrf.token_id%"/>
+    </service>
+    <service id="App\Form\CharacterFormType" class="App\Form\CharacterFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type" csrf_token_id="%.form.type_extension.csrf.token_id%"/>
+    </service>
+    <service id="App\Form\PartyFormType" class="App\Form\PartyFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type" csrf_token_id="%.form.type_extension.csrf.token_id%"/>
+    </service>
+    <service id="App\Form\RaceFormType" class="App\Form\RaceFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type" csrf_token_id="%.form.type_extension.csrf.token_id%"/>
+    </service>
+    <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type" csrf_token_id="%.form.type_extension.csrf.token_id%"/>
+    </service>
+    <service id="App\Form\SkillFormType" class="App\Form\SkillFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type" csrf_token_id="%.form.type_extension.csrf.token_id%"/>
     </service>
     <service id="App\Repository\CharacterCLassRepository" class="App\Repository\CharacterCLassRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -521,7 +588,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" priority="-50">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.yMnRLvv"/>
+      <argument type="service" id=".service_locator.CaOzMSp"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" priority="-100">controller.argument_value_resolver</tag>
@@ -1484,9 +1551,16 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\CharacterClassFormType</argument>
+        <argument>App\Form\CharacterFormType</argument>
+        <argument>App\Form\PartyFormType</argument>
+        <argument>App\Form\RaceFormType</argument>
+        <argument>App\Form\RegistrationFormType</argument>
+        <argument>App\Form\SkillFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -3558,7 +3632,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.yMnRLvv"/>
+      <argument type="service" id=".service_locator.CaOzMSp"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -3632,11 +3706,17 @@
     <service id="routing.loader.attribute.services" class="Symfony\Component\Routing\Loader\AttributeServicesLoader">
       <tag name="routing.loader" priority="-10"/>
       <argument type="collection">
+        <argument>App\Controller\AdminController</argument>
         <argument>App\Controller\Api\ApiCharacterController</argument>
         <argument>App\Controller\Api\ApiClassController</argument>
         <argument>App\Controller\Api\ApiPartyController</argument>
         <argument>App\Controller\Api\ApiRaceController</argument>
         <argument>App\Controller\Api\ApiSkillController</argument>
+        <argument>App\Controller\CharacterController</argument>
+        <argument>App\Controller\HomeController</argument>
+        <argument>App\Controller\PartyController</argument>
+        <argument>App\Controller\RegistrationController</argument>
+        <argument>App\Controller\SecurityController</argument>
       </argument>
     </service>
     <service id="routing.loader.attribute.directory" class="Symfony\Component\Routing\Loader\AttributeDirectoryLoader">
@@ -4174,7 +4254,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.rht_M5G"/>
+      <argument type="service" id=".service_locator.K6l0U5Y"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4282,7 +4362,14 @@
       <argument>validators</argument>
       <argument type="service" id="form.server_params"/>
       <argument>%form.type_extension.csrf.field_attr%</argument>
-      <argument>submit</argument>
+      <argument type="collection">
+        <argument key="App\Form\CharacterClassFormType">submit</argument>
+        <argument key="App\Form\CharacterFormType">submit</argument>
+        <argument key="App\Form\PartyFormType">submit</argument>
+        <argument key="App\Form\RaceFormType">submit</argument>
+        <argument key="App\Form\RegistrationFormType">submit</argument>
+        <argument key="App\Form\SkillFormType">submit</argument>
+      </argument>
     </service>
     <service id="validator.builder" class="Symfony\Component\Validator\ValidatorBuilder">
       <call method="setConstraintValidatorFactory">
@@ -6668,7 +6755,7 @@
       <argument type="service" id=".service_locator.rAuPNI6"/>
       <argument type="collection">
         <argument key="dev">null</argument>
-        <argument key="main">null</argument>
+        <argument key="main" type="service" id=".service_locator.567piEK"/>
       </argument>
     </service>
     <service id="security.user_value_resolver" class="Symfony\Component\Security\Http\Controller\UserValueResolver">
@@ -6764,6 +6851,14 @@
       <argument type="service" id="request_stack" on-invalid="null"/>
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="security.token_storage" on-invalid="null"/>
+      <call method="registerListener">
+        <argument>main</argument>
+        <argument>app_logout</argument>
+        <argument>logout</argument>
+        <argument>_csrf_token</argument>
+        <argument>null</argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="security.route_loader.logout" class="Symfony\Bundle\SecurityBundle\Routing\LogoutRouteLoader">
       <tag name="routing.route_loader"/>
@@ -6873,7 +6968,36 @@
         </service>
       </argument>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.BhpRUZK"/>
+        <argument type="collection">
+          <argument>PUBLIC_ACCESS</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.7hffHUr"/>
+        <argument type="collection">
+          <argument>PUBLIC_ACCESS</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.0tMb.ud"/>
+        <argument type="collection">
+          <argument>PUBLIC_ACCESS</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.CUDSgej"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.untracked_token_storage"/>
@@ -7232,7 +7356,9 @@
       <argument type="service" id=".service_locator.Bz.C4As"/>
       <argument type="service" id=".service_locator.GW5y7PS"/>
       <argument type="collection">
-        <argument key="main" type="collection"/>
+        <argument key="main" type="collection">
+          <argument type="service" id="debug.security.authenticator.form_login.main"/>
+        </argument>
       </argument>
       <argument>false</argument>
       <call method="setName">
@@ -7285,12 +7411,23 @@
       <argument>false</argument>
       <argument>security.user.provider.concrete.app_user_provider</argument>
       <argument>main</argument>
+      <argument>security.authenticator.form_login.main</argument>
       <argument>null</argument>
       <argument>null</argument>
+      <argument type="collection">
+        <argument>form_login</argument>
+      </argument>
       <argument>null</argument>
-      <argument type="collection"/>
-      <argument>null</argument>
-      <argument>null</argument>
+      <argument type="collection">
+        <argument key="path">app_logout</argument>
+        <argument key="target">app_login</argument>
+        <argument key="enable_csrf">null</argument>
+        <argument key="csrf_token_id">logout</argument>
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="invalidate_session">true</argument>
+        <argument key="clear_site_data" type="collection"/>
+        <argument key="delete_cookies" type="collection"/>
+      </argument>
     </service>
     <service id="security.listener.main.user_provider" class="Symfony\Component\Security\Http\EventListener\UserProviderListener">
       <tag name="kernel.event_listener" dispatcher="debug.security.event_dispatcher.main" event="Symfony\Component\Security\Http\Event\CheckPassportEvent" priority="2048" method="checkPassport"/>
@@ -7319,9 +7456,81 @@
       <tag name="kernel.event_subscriber" dispatcher="debug.security.event_dispatcher.main"/>
       <argument type="service" id="security.authentication.session_strategy"/>
     </service>
+    <service id="security.logout_listener.main" class="Symfony\Component\Security\Http\Firewall\LogoutListener">
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument type="service" id="debug.security.event_dispatcher.main"/>
+      <argument type="collection">
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="csrf_token_id">logout</argument>
+        <argument key="logout_path">app_logout</argument>
+      </argument>
+    </service>
+    <service id="security.logout.listener.default.main" class="Symfony\Component\Security\Http\EventListener\DefaultLogoutListener">
+      <tag name="kernel.event_subscriber" dispatcher="debug.security.event_dispatcher.main"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument>app_login</argument>
+    </service>
+    <service id="security.logout.listener.session.main" class="Symfony\Component\Security\Http\EventListener\SessionLogoutListener">
+      <tag name="kernel.event_subscriber" dispatcher="debug.security.event_dispatcher.main"/>
+    </service>
+    <service id="security.authenticator.form_login.main" class="Symfony\Component\Security\Http\Authenticator\FormLoginAuthenticator">
+      <argument type="service" id="security.http_utils"/>
+      <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
+      <argument type="service" id="security.authentication.success_handler.main.form_login"/>
+      <argument type="service" id="security.authentication.failure_handler.main.form_login"/>
+      <argument type="collection">
+        <argument key="login_path">app_login</argument>
+        <argument key="check_path">app_login</argument>
+        <argument key="enable_csrf">true</argument>
+        <argument key="use_forward">false</argument>
+        <argument key="username_parameter">_username</argument>
+        <argument key="password_parameter">_password</argument>
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="csrf_token_id">authenticate</argument>
+        <argument key="post_only">true</argument>
+        <argument key="form_only">false</argument>
+      </argument>
+    </service>
+    <service id="security.authentication.success_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler">
+      <argument type="service" id="security.http_utils"/>
+      <argument type="collection"/>
+      <argument type="service" id="monolog.logger" on-invalid="null"/>
+      <call method="setOptions">
+        <argument type="collection">
+          <argument key="login_path">app_login</argument>
+          <argument key="default_target_path">app_home</argument>
+          <argument key="always_use_default_target_path">false</argument>
+          <argument key="target_path_parameter">_target_path</argument>
+          <argument key="use_referer">false</argument>
+        </argument>
+      </call>
+      <call method="setFirewallName">
+        <argument>main</argument>
+      </call>
+    </service>
+    <service id="security.authentication.failure_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler">
+      <argument type="service" id="http_kernel"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument type="collection"/>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+      <call method="setOptions">
+        <argument type="collection">
+          <argument key="login_path">app_login</argument>
+          <argument key="failure_path">null</argument>
+          <argument key="failure_forward">false</argument>
+          <argument key="failure_path_parameter">_failure_path</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="debug.security.authenticator.form_login.main" class="Symfony\Component\Security\Http\Authenticator\Debug\TraceableAuthenticator">
+      <argument type="service" id="security.authenticator.form_login.main"/>
+    </service>
     <service id="security.authenticator.manager.main" class="Symfony\Component\Security\Http\Authentication\AuthenticatorManager">
       <tag name="monolog.logger" channel="security"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument type="service" id="debug.security.authenticator.form_login.main"/>
+      </argument>
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="debug.security.event_dispatcher.main"/>
       <argument>main</argument>
@@ -7344,11 +7553,17 @@
       <argument type="service" id="security.authentication.trust_resolver"/>
       <argument type="service" id="security.http_utils"/>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument type="service" id="security.authenticator.form_login.main"/>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument>false</argument>
+    </service>
+    <service id=".service_locator.567piEK" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="security.authenticator.form_login.main" type="service_closure" id="security.authenticator.form_login.main"/>
+      </argument>
     </service>
     <service id="security.firewall.map.context.main" class="Symfony\Bundle\SecurityBundle\Security\LazyFirewallContext">
       <argument type="iterator">
@@ -7358,7 +7573,7 @@
         <argument type="service" id="security.access_listener"/>
       </argument>
       <argument type="service" id="security.exception_listener.main"/>
-      <argument>null</argument>
+      <argument type="service" id="security.logout_listener.main"/>
       <argument type="service" id="security.firewall.map.config.main"/>
       <argument type="service" id="security.untracked_token_storage"/>
     </service>
@@ -7367,6 +7582,38 @@
       <argument type="collection">
         <argument key="security.firewall.map.context.dev" type="service_closure" id="security.firewall.map.context.dev"/>
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
+      </argument>
+    </service>
+    <service id=".security.request_matcher.T8BdVIN" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/login</argument>
+    </service>
+    <service id=".security.request_matcher.BhpRUZK" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.T8BdVIN"/>
+      </argument>
+    </service>
+    <service id=".security.request_matcher.LORg6t3" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/register</argument>
+    </service>
+    <service id=".security.request_matcher.7hffHUr" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.LORg6t3"/>
+      </argument>
+    </service>
+    <service id=".security.request_matcher.3qgJVJN" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/api</argument>
+    </service>
+    <service id=".security.request_matcher.0tMb.ud" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.3qgJVJN"/>
+      </argument>
+    </service>
+    <service id=".security.request_matcher.SbN0Tkg" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/</argument>
+    </service>
+    <service id=".security.request_matcher.CUDSgej" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+      <argument type="collection">
+        <argument type="service" id=".security.request_matcher.SbN0Tkg"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
@@ -7700,6 +7947,10 @@
       <tag name="kernel.event_listener" event="kernel.response" method="onResponse" priority="-15"/>
       <tag name="container.hot_path"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\AdminController.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" autowire="true" abstract="true"/>
     <service id=".instanceof.App\Controller\Api\ApiCharacterController.0.App\Controller\Api\ApiCharacterController" class="App\Controller\Api\ApiCharacterController" autowire="true" abstract="true"/>
@@ -7720,6 +7971,26 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" autowire="true" abstract="true"/>
     <service id=".instanceof.App\Controller\Api\ApiSkillController.0.App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Api\ApiSkillController" class="App\Controller\Api\ApiSkillController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CharacterController" class="App\Controller\CharacterController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CharacterController" class="App\Controller\CharacterController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\CharacterController.0.App\Controller\CharacterController" class="App\Controller\CharacterController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CharacterController" class="App\Controller\CharacterController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\HomeController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PartyController" class="App\Controller\PartyController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PartyController" class="App\Controller\PartyController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\PartyController.0.App\Controller\PartyController" class="App\Controller\PartyController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PartyController" class="App\Controller\PartyController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\RegistrationController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
+    <service id=".instanceof.App\Controller\SecurityController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.App\Entity\Character.0.App\Entity\Character" class="App\Entity\Character" autowire="true" abstract="true"/>
@@ -7734,6 +8005,18 @@
     <service id=".abstract.instanceof.App\Entity\Skill" class="App\Entity\Skill" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.App\Entity\User.0.App\Entity\User" class="App\Entity\User" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Entity\User" class="App\Entity\User" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CharacterClassFormType" class="App\Form\CharacterClassFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CharacterClassFormType" class="App\Form\CharacterClassFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CharacterFormType" class="App\Form\CharacterFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CharacterFormType" class="App\Form\CharacterFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PartyFormType" class="App\Form\PartyFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PartyFormType" class="App\Form\PartyFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RaceFormType" class="App\Form\RaceFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RaceFormType" class="App\Form\RaceFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SkillFormType" class="App\Form\SkillFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\SkillFormType" class="App\Form\SkillFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CharacterCLassRepository" class="App\Repository\CharacterCLassRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CharacterCLassRepository" class="App\Repository\CharacterCLassRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CharacterRepository" class="App\Repository\CharacterRepository" autowire="true" abstract="true"/>
@@ -7794,6 +8077,22 @@
         <argument type="collection">
           <argument type="service_closure" id="security.listener.session.main"/>
           <argument>onSuccessfulLogin</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>Symfony\Component\Security\Http\Event\LogoutEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="security.logout.listener.default.main"/>
+          <argument>onLogout</argument>
+        </argument>
+        <argument>64</argument>
+      </call>
+      <call method="addListener">
+        <argument>Symfony\Component\Security\Http\Event\LogoutEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="security.logout.listener.session.main"/>
+          <argument>onLogout</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -8264,6 +8563,135 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.1vYpZ1B" method="withContext"/>
     </service>
+    <service id=".service_locator.kVZvsIK" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="userRepo" type="service_closure" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.kVZvsIK.App\Controller\AdminController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::index()"/>
+      <argument>App\Controller\AdminController::index()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.kVZvsIK" method="withContext"/>
+    </service>
+    <service id=".service_locator.ag0uCa9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\RaceRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ag0uCa9.App\Controller\AdminController::races()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::races()"/>
+      <argument>App\Controller\AdminController::races()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.ag0uCa9" method="withContext"/>
+    </service>
+    <service id=".service_locator.z0A7H.F" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.z0A7H.F.App\Controller\AdminController::newRace()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::newRace()"/>
+      <argument>App\Controller\AdminController::newRace()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.z0A7H.F" method="withContext"/>
+    </service>
+    <service id=".service_locator.vABg7Qd" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\RaceRepository"/>
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.vABg7Qd.App\Controller\AdminController::editRace()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::editRace()"/>
+      <argument>App\Controller\AdminController::editRace()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vABg7Qd" method="withContext"/>
+    </service>
+    <service id=".service_locator.vABg7Qd.App\Controller\AdminController::deleteRace()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::deleteRace()"/>
+      <argument>App\Controller\AdminController::deleteRace()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vABg7Qd" method="withContext"/>
+    </service>
+    <service id=".service_locator.y4fhDcK" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\CharacterCLassRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.y4fhDcK.App\Controller\AdminController::classes()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::classes()"/>
+      <argument>App\Controller\AdminController::classes()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.y4fhDcK" method="withContext"/>
+    </service>
+    <service id=".service_locator.z0A7H.F.App\Controller\AdminController::newClass()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::newClass()"/>
+      <argument>App\Controller\AdminController::newClass()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.z0A7H.F" method="withContext"/>
+    </service>
+    <service id=".service_locator.ptd3Kvb" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\CharacterCLassRepository"/>
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ptd3Kvb.App\Controller\AdminController::editClass()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::editClass()"/>
+      <argument>App\Controller\AdminController::editClass()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.ptd3Kvb" method="withContext"/>
+    </service>
+    <service id=".service_locator.ptd3Kvb.App\Controller\AdminController::deleteClass()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::deleteClass()"/>
+      <argument>App\Controller\AdminController::deleteClass()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.ptd3Kvb" method="withContext"/>
+    </service>
+    <service id=".service_locator.sX5tY6J" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\SkillRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.sX5tY6J.App\Controller\AdminController::skills()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::skills()"/>
+      <argument>App\Controller\AdminController::skills()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.sX5tY6J" method="withContext"/>
+    </service>
+    <service id=".service_locator.z0A7H.F.App\Controller\AdminController::newSkill()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::newSkill()"/>
+      <argument>App\Controller\AdminController::newSkill()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.z0A7H.F" method="withContext"/>
+    </service>
+    <service id=".service_locator.uWdy189" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\SkillRepository"/>
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.uWdy189.App\Controller\AdminController::editSkill()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::editSkill()"/>
+      <argument>App\Controller\AdminController::editSkill()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.uWdy189" method="withContext"/>
+    </service>
+    <service id=".service_locator.uWdy189.App\Controller\AdminController::deleteSkill()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController::deleteSkill()"/>
+      <argument>App\Controller\AdminController::deleteSkill()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.uWdy189" method="withContext"/>
+    </service>
     <service id=".service_locator.BDlMk_E" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -8275,12 +8703,6 @@
       <argument>App\Controller\Api\ApiCharacterController::list()</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.BDlMk_E" method="withContext"/>
-    </service>
-    <service id=".service_locator.z0A7H.F" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
     </service>
     <service id=".service_locator.z0A7H.F.App\Controller\Api\ApiCharacterController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Api\ApiCharacterController::show()"/>
@@ -8354,13 +8776,177 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.AO_qz9R" method="withContext"/>
     </service>
-    <service id=".service_locator.yMnRLvv" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.JDlvuCO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\CharacterRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.JDlvuCO.App\Controller\CharacterController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CharacterController::index()"/>
+      <argument>App\Controller\CharacterController::index()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.JDlvuCO" method="withContext"/>
+    </service>
+    <service id=".service_locator.GPflyJi" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="slugger" type="service_closure" id="slugger"/>
+        <argument key="classRepo" type="service_closure" id="App\Repository\CharacterCLassRepository"/>
+        <argument key="raceRepo" type="service_closure" id="App\Repository\RaceRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.GPflyJi.App\Controller\CharacterController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CharacterController::new()"/>
+      <argument>App\Controller\CharacterController::new()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.GPflyJi" method="withContext"/>
+    </service>
+    <service id=".service_locator.z0A7H.F.App\Controller\CharacterController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CharacterController::show()"/>
+      <argument>App\Controller\CharacterController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.z0A7H.F" method="withContext"/>
+    </service>
+    <service id=".service_locator.1CVr5Gm" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="slugger" type="service_closure" id="slugger"/>
+        <argument key="repo" type="service_closure" id="App\Repository\CharacterRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.1CVr5Gm.App\Controller\CharacterController::edit()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CharacterController::edit()"/>
+      <argument>App\Controller\CharacterController::edit()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.1CVr5Gm" method="withContext"/>
+    </service>
+    <service id=".service_locator.h8Fk5Ku" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="repo" type="service_closure" id="App\Repository\CharacterRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.h8Fk5Ku.App\Controller\CharacterController::delete()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CharacterController::delete()"/>
+      <argument>App\Controller\CharacterController::delete()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.h8Fk5Ku" method="withContext"/>
+    </service>
+    <service id=".service_locator.AVG.GIU" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\PartyRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.AVG.GIU.App\Controller\PartyController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartyController::index()"/>
+      <argument>App\Controller\PartyController::index()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.AVG.GIU" method="withContext"/>
+    </service>
+    <service id=".service_locator.z0A7H.F.App\Controller\PartyController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartyController::new()"/>
+      <argument>App\Controller\PartyController::new()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.z0A7H.F" method="withContext"/>
+    </service>
+    <service id=".service_locator.TZywrpj" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\PartyRepository"/>
+        <argument key="charRepo" type="service_closure" id="App\Repository\CharacterRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.TZywrpj.App\Controller\PartyController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartyController::show()"/>
+      <argument>App\Controller\PartyController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TZywrpj" method="withContext"/>
+    </service>
+    <service id=".service_locator.68dLiKz" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\PartyRepository"/>
+        <argument key="charRepo" type="service_closure" id="App\Repository\CharacterRepository"/>
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.68dLiKz.App\Controller\PartyController::join()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartyController::join()"/>
+      <argument>App\Controller\PartyController::join()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.68dLiKz" method="withContext"/>
+    </service>
+    <service id=".service_locator.68dLiKz.App\Controller\PartyController::leave()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartyController::leave()"/>
+      <argument>App\Controller\PartyController::leave()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.68dLiKz" method="withContext"/>
+    </service>
+    <service id=".service_locator.LH5.Iv6" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\PartyRepository"/>
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.LH5.Iv6.App\Controller\PartyController::delete()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartyController::delete()"/>
+      <argument>App\Controller\PartyController::delete()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.LH5.Iv6" method="withContext"/>
+    </service>
+    <service id=".service_locator..vc8rA0" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
+        <argument key="security" type="service_closure" id="security.helper"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator..vc8rA0.App\Controller\RegistrationController::register()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RegistrationController::register()"/>
+      <argument>App\Controller\RegistrationController::register()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator..vc8rA0" method="withContext"/>
+    </service>
+    <service id=".service_locator.0MQaTBY" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
+      </argument>
+    </service>
+    <service id=".service_locator.0MQaTBY.App\Controller\SecurityController::login()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SecurityController::login()"/>
+      <argument>App\Controller\SecurityController::login()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.0MQaTBY" method="withContext"/>
+    </service>
+    <service id=".service_locator.CaOzMSp" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.1vYpZ1B.kernel::loadRoutes()"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.1vYpZ1B.kernel::loadRoutes()"/>
+        <argument key="App\Controller\AdminController::index" type="service_closure" id=".service_locator.kVZvsIK.App\Controller\AdminController::index()"/>
+        <argument key="App\Controller\AdminController::races" type="service_closure" id=".service_locator.ag0uCa9.App\Controller\AdminController::races()"/>
+        <argument key="App\Controller\AdminController::newRace" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\AdminController::newRace()"/>
+        <argument key="App\Controller\AdminController::editRace" type="service_closure" id=".service_locator.vABg7Qd.App\Controller\AdminController::editRace()"/>
+        <argument key="App\Controller\AdminController::deleteRace" type="service_closure" id=".service_locator.vABg7Qd.App\Controller\AdminController::deleteRace()"/>
+        <argument key="App\Controller\AdminController::classes" type="service_closure" id=".service_locator.y4fhDcK.App\Controller\AdminController::classes()"/>
+        <argument key="App\Controller\AdminController::newClass" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\AdminController::newClass()"/>
+        <argument key="App\Controller\AdminController::editClass" type="service_closure" id=".service_locator.ptd3Kvb.App\Controller\AdminController::editClass()"/>
+        <argument key="App\Controller\AdminController::deleteClass" type="service_closure" id=".service_locator.ptd3Kvb.App\Controller\AdminController::deleteClass()"/>
+        <argument key="App\Controller\AdminController::skills" type="service_closure" id=".service_locator.sX5tY6J.App\Controller\AdminController::skills()"/>
+        <argument key="App\Controller\AdminController::newSkill" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\AdminController::newSkill()"/>
+        <argument key="App\Controller\AdminController::editSkill" type="service_closure" id=".service_locator.uWdy189.App\Controller\AdminController::editSkill()"/>
+        <argument key="App\Controller\AdminController::deleteSkill" type="service_closure" id=".service_locator.uWdy189.App\Controller\AdminController::deleteSkill()"/>
         <argument key="App\Controller\Api\ApiCharacterController::list" type="service_closure" id=".service_locator.BDlMk_E.App\Controller\Api\ApiCharacterController::list()"/>
         <argument key="App\Controller\Api\ApiCharacterController::show" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\Api\ApiCharacterController::show()"/>
         <argument key="App\Controller\Api\ApiClassController::list" type="service_closure" id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::list()"/>
@@ -8370,8 +8956,34 @@
         <argument key="App\Controller\Api\ApiRaceController::list" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::list()"/>
         <argument key="App\Controller\Api\ApiRaceController::show" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::show()"/>
         <argument key="App\Controller\Api\ApiSkillController::list" type="service_closure" id=".service_locator.AO_qz9R.App\Controller\Api\ApiSkillController::list()"/>
+        <argument key="App\Controller\CharacterController::index" type="service_closure" id=".service_locator.JDlvuCO.App\Controller\CharacterController::index()"/>
+        <argument key="App\Controller\CharacterController::new" type="service_closure" id=".service_locator.GPflyJi.App\Controller\CharacterController::new()"/>
+        <argument key="App\Controller\CharacterController::show" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\CharacterController::show()"/>
+        <argument key="App\Controller\CharacterController::edit" type="service_closure" id=".service_locator.1CVr5Gm.App\Controller\CharacterController::edit()"/>
+        <argument key="App\Controller\CharacterController::delete" type="service_closure" id=".service_locator.h8Fk5Ku.App\Controller\CharacterController::delete()"/>
+        <argument key="App\Controller\PartyController::index" type="service_closure" id=".service_locator.AVG.GIU.App\Controller\PartyController::index()"/>
+        <argument key="App\Controller\PartyController::new" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\PartyController::new()"/>
+        <argument key="App\Controller\PartyController::show" type="service_closure" id=".service_locator.TZywrpj.App\Controller\PartyController::show()"/>
+        <argument key="App\Controller\PartyController::join" type="service_closure" id=".service_locator.68dLiKz.App\Controller\PartyController::join()"/>
+        <argument key="App\Controller\PartyController::leave" type="service_closure" id=".service_locator.68dLiKz.App\Controller\PartyController::leave()"/>
+        <argument key="App\Controller\PartyController::delete" type="service_closure" id=".service_locator.LH5.Iv6.App\Controller\PartyController::delete()"/>
+        <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator..vc8rA0.App\Controller\RegistrationController::register()"/>
+        <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.0MQaTBY.App\Controller\SecurityController::login()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.1vYpZ1B.kernel::loadRoutes()"/>
+        <argument key="App\Controller\AdminController:index" type="service_closure" id=".service_locator.kVZvsIK.App\Controller\AdminController::index()"/>
+        <argument key="App\Controller\AdminController:races" type="service_closure" id=".service_locator.ag0uCa9.App\Controller\AdminController::races()"/>
+        <argument key="App\Controller\AdminController:newRace" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\AdminController::newRace()"/>
+        <argument key="App\Controller\AdminController:editRace" type="service_closure" id=".service_locator.vABg7Qd.App\Controller\AdminController::editRace()"/>
+        <argument key="App\Controller\AdminController:deleteRace" type="service_closure" id=".service_locator.vABg7Qd.App\Controller\AdminController::deleteRace()"/>
+        <argument key="App\Controller\AdminController:classes" type="service_closure" id=".service_locator.y4fhDcK.App\Controller\AdminController::classes()"/>
+        <argument key="App\Controller\AdminController:newClass" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\AdminController::newClass()"/>
+        <argument key="App\Controller\AdminController:editClass" type="service_closure" id=".service_locator.ptd3Kvb.App\Controller\AdminController::editClass()"/>
+        <argument key="App\Controller\AdminController:deleteClass" type="service_closure" id=".service_locator.ptd3Kvb.App\Controller\AdminController::deleteClass()"/>
+        <argument key="App\Controller\AdminController:skills" type="service_closure" id=".service_locator.sX5tY6J.App\Controller\AdminController::skills()"/>
+        <argument key="App\Controller\AdminController:newSkill" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\AdminController::newSkill()"/>
+        <argument key="App\Controller\AdminController:editSkill" type="service_closure" id=".service_locator.uWdy189.App\Controller\AdminController::editSkill()"/>
+        <argument key="App\Controller\AdminController:deleteSkill" type="service_closure" id=".service_locator.uWdy189.App\Controller\AdminController::deleteSkill()"/>
         <argument key="App\Controller\Api\ApiCharacterController:list" type="service_closure" id=".service_locator.BDlMk_E.App\Controller\Api\ApiCharacterController::list()"/>
         <argument key="App\Controller\Api\ApiCharacterController:show" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\Api\ApiCharacterController::show()"/>
         <argument key="App\Controller\Api\ApiClassController:list" type="service_closure" id=".service_locator.9nerQqG.App\Controller\Api\ApiClassController::list()"/>
@@ -8381,6 +8993,19 @@
         <argument key="App\Controller\Api\ApiRaceController:list" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::list()"/>
         <argument key="App\Controller\Api\ApiRaceController:show" type="service_closure" id=".service_locator.VjnedoE.App\Controller\Api\ApiRaceController::show()"/>
         <argument key="App\Controller\Api\ApiSkillController:list" type="service_closure" id=".service_locator.AO_qz9R.App\Controller\Api\ApiSkillController::list()"/>
+        <argument key="App\Controller\CharacterController:index" type="service_closure" id=".service_locator.JDlvuCO.App\Controller\CharacterController::index()"/>
+        <argument key="App\Controller\CharacterController:new" type="service_closure" id=".service_locator.GPflyJi.App\Controller\CharacterController::new()"/>
+        <argument key="App\Controller\CharacterController:show" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\CharacterController::show()"/>
+        <argument key="App\Controller\CharacterController:edit" type="service_closure" id=".service_locator.1CVr5Gm.App\Controller\CharacterController::edit()"/>
+        <argument key="App\Controller\CharacterController:delete" type="service_closure" id=".service_locator.h8Fk5Ku.App\Controller\CharacterController::delete()"/>
+        <argument key="App\Controller\PartyController:index" type="service_closure" id=".service_locator.AVG.GIU.App\Controller\PartyController::index()"/>
+        <argument key="App\Controller\PartyController:new" type="service_closure" id=".service_locator.z0A7H.F.App\Controller\PartyController::new()"/>
+        <argument key="App\Controller\PartyController:show" type="service_closure" id=".service_locator.TZywrpj.App\Controller\PartyController::show()"/>
+        <argument key="App\Controller\PartyController:join" type="service_closure" id=".service_locator.68dLiKz.App\Controller\PartyController::join()"/>
+        <argument key="App\Controller\PartyController:leave" type="service_closure" id=".service_locator.68dLiKz.App\Controller\PartyController::leave()"/>
+        <argument key="App\Controller\PartyController:delete" type="service_closure" id=".service_locator.LH5.Iv6.App\Controller\PartyController::delete()"/>
+        <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator..vc8rA0.App\Controller\RegistrationController::register()"/>
+        <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.0MQaTBY.App\Controller\SecurityController::login()"/>
       </argument>
     </service>
     <service id=".service_locator.S9tnIXR" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -8566,9 +9191,15 @@
       <argument type="service" id="argument_resolver.query_parameter_value_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.rht_M5G" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.K6l0U5Y" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\CharacterClassFormType" type="service_closure" id="App\Form\CharacterClassFormType"/>
+        <argument key="App\Form\CharacterFormType" type="service_closure" id="App\Form\CharacterFormType"/>
+        <argument key="App\Form\PartyFormType" type="service_closure" id="App\Form\PartyFormType"/>
+        <argument key="App\Form\RaceFormType" type="service_closure" id="App\Form\RaceFormType"/>
+        <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
+        <argument key="App\Form\SkillFormType" type="service_closure" id="App\Form\SkillFormType"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service_closure" id="form.type.form"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service_closure" id="form.type.file"/>
@@ -8971,6 +9602,12 @@
         <argument key="web_link.http_header_serializer" type="service_closure" id="web_link.http_header_serializer" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\AdminController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AdminController"/>
+      <argument>App\Controller\AdminController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
     <service id=".service_locator.TJNRSaV.App\Controller\Api\ApiCharacterController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Api\ApiCharacterController"/>
       <argument>App\Controller\Api\ApiCharacterController</argument>
@@ -8998,6 +9635,36 @@
     <service id=".service_locator.TJNRSaV.App\Controller\Api\ApiSkillController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Api\ApiSkillController"/>
       <argument>App\Controller\Api\ApiSkillController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\CharacterController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CharacterController"/>
+      <argument>App\Controller\CharacterController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\HomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\HomeController"/>
+      <argument>App\Controller\HomeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\PartyController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartyController"/>
+      <argument>App\Controller\PartyController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RegistrationController"/>
+      <argument>App\Controller\RegistrationController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.TJNRSaV" method="withContext"/>
+    </service>
+    <service id=".service_locator.TJNRSaV.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
+      <argument>App\Controller\SecurityController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.TJNRSaV" method="withContext"/>
     </service>
@@ -9193,11 +9860,17 @@
       <call method="allowControllers">
         <argument type="collection">
           <argument>App\Kernel</argument>
+          <argument>App\Controller\AdminController</argument>
           <argument>App\Controller\Api\ApiCharacterController</argument>
           <argument>App\Controller\Api\ApiClassController</argument>
           <argument>App\Controller\Api\ApiPartyController</argument>
           <argument>App\Controller\Api\ApiRaceController</argument>
           <argument>App\Controller\Api\ApiSkillController</argument>
+          <argument>App\Controller\CharacterController</argument>
+          <argument>App\Controller\HomeController</argument>
+          <argument>App\Controller\PartyController</argument>
+          <argument>App\Controller\RegistrationController</argument>
+          <argument>App\Controller\SecurityController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
       </call>
@@ -10649,7 +11322,7 @@
     <service id="doctrine.fixtures.provider" alias="doctrine.fixtures.loader"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.ryAvHi4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.yMnRLvv"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.CaOzMSp"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.W55Po6X"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".Psr\Log\LoggerInterface $request.logger" alias="monolog.logger.request"/>
@@ -10703,12 +11376,29 @@
     <service id=".signing.messenger.default_serializer.inner" alias="messenger.transport.native_php_serializer"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.c0wzfI4" alias=".service_locator.1vYpZ1B"/>
-    <service id=".service_locator.vmqIClB" alias=".service_locator.BDlMk_E"/>
+    <service id=".service_locator.3aAg6C." alias=".service_locator.kVZvsIK"/>
+    <service id=".service_locator.kJoCio3" alias=".service_locator.ag0uCa9"/>
     <service id=".service_locator.0ekWYPZ" alias=".service_locator.z0A7H.F"/>
+    <service id=".service_locator.1.s09Kn" alias=".service_locator.vABg7Qd"/>
+    <service id=".service_locator.Ev4h8uL" alias=".service_locator.y4fhDcK"/>
+    <service id=".service_locator.ana0D3g" alias=".service_locator.ptd3Kvb"/>
+    <service id=".service_locator.zf5ydy3" alias=".service_locator.sX5tY6J"/>
+    <service id=".service_locator.upVG4LC" alias=".service_locator.uWdy189"/>
+    <service id=".service_locator.vmqIClB" alias=".service_locator.BDlMk_E"/>
     <service id=".service_locator.Z9qb75L" alias=".service_locator.9nerQqG"/>
     <service id=".service_locator.SU6eLUP" alias=".service_locator.bL3Pl7Q"/>
     <service id=".service_locator.Tpc8tJO" alias=".service_locator.VjnedoE"/>
     <service id=".service_locator..B7HT0n" alias=".service_locator.AO_qz9R"/>
+    <service id=".service_locator._3nt4Kr" alias=".service_locator.JDlvuCO"/>
+    <service id=".service_locator._aKRiaM" alias=".service_locator.GPflyJi"/>
+    <service id=".service_locator.cTK6zGV" alias=".service_locator.1CVr5Gm"/>
+    <service id=".service_locator.RSDLob." alias=".service_locator.h8Fk5Ku"/>
+    <service id=".service_locator.oPqwcOi" alias=".service_locator.AVG.GIU"/>
+    <service id=".service_locator.DbLU8OD" alias=".service_locator.TZywrpj"/>
+    <service id=".service_locator.aB.u31v" alias=".service_locator.68dLiKz"/>
+    <service id=".service_locator.hgb8yf_" alias=".service_locator.LH5.Iv6"/>
+    <service id=".service_locator.FeaMHV8" alias=".service_locator..vc8rA0"/>
+    <service id=".service_locator.uBwBrvQ" alias=".service_locator.0MQaTBY"/>
     <service id=".service_locator.D6tJ4Px" alias=".service_locator.TJNRSaV"/>
   </services>
 </container>

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard Admin{% endblock %}
+
+{% block body %}
+<h1>🛡️ Dashboard Admin</h1>
+
+<nav>
+    <a href="{{ path('admin_race_index') }}">Races</a> |
+    <a href="{{ path('admin_class_index') }}">Classes</a> |
+    <a href="{{ path('admin_skill_index') }}">Compétences</a>
+</nav>
+
+<hr>
+
+<h2>Liste des utilisateurs</h2>
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Rôles</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.roles|join(', ') }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

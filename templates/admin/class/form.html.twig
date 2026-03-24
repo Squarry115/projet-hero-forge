@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+<h1>{{ title }}</h1>
+{{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.HitDice) }}
+    <button type="submit">Sauvegarder</button>
+{{ form_end(form) }}
+<a href="{{ path('admin_class_index') }}">← Retour</a>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes personnages{% endblock %}
+
+{% block body %}
+<h1>Mes personnages</h1>
+
+<a href="{{ path('app_character_new') }}">+ Créer un personnage</a>
+
+<hr>
+
+{# Filtres de recherche #}
+<form method="get">
+    <input type="text" name="name" placeholder="Rechercher par nom" value="{{ name }}">
+    <input type="text" name="race" placeholder="Filtrer par race" value="{{ race }}">
+    <input type="text" name="class" placeholder="Filtrer par classe" value="{{ class }}">
+    <button type="submit">Filtrer</button>
+    <a href="{{ path('app_character_index') }}">Réinitialiser</a>
+</form>
+
+<hr>
+
+{% if characters is empty %}
+    <p>Aucun personnage trouvé.</p>
+{% else %}
+    {% for character in characters %}
+        <div style="border:1px solid #ccc; margin:10px; padding:10px;">
+            {% if character.image is defined and character.image %}
+                <img src="{{ asset('uploads/characters/' ~ character.image) }}" alt="{{ character.name }}" style="width:60px; height:60px; border-radius:50%;">
+            {% endif %}
+            <strong>{{ character.name }}</strong> —
+            Niveau {{ character.level }} |
+            Race : {{ character.race_name ?? '?' }} |
+            Classe : {{ character.class_name ?? '?' }} |
+            PV : {{ character.hit_points }}
+            <br>
+            <a href="{{ path('app_character_show', {id: character.id}) }}">Voir</a>
+            <a href="{{ path('app_character_edit', {id: character.id}) }}">Modifier</a>
+            <form method="post" action="{{ path('app_character_delete', {id: character.id}) }}" style="display:inline" onsubmit="return confirm('Supprimer ce personnage ?')">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ character.id) }}">
+                <button type="submit">Supprimer</button>
+            </form>
+        </div>
+    {% endfor %}
+{% endif %}
+{% endblock %}

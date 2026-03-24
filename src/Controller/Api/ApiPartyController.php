@@ -23,13 +23,22 @@ class ApiPartyController extends AbstractController
             $parties = array_filter($parties, fn($p) => count($p->getCharacters()) < $p->getMaxSize());
         }
 
-        $data = array_map(fn($party) => [
-            'id'          => $party->getId(),
-            'name'        => $party->getName(),
-            'description' => $party->getDescription(),
-            'maxSize'     => $party->getMaxSize(),
-            'members'     => count($party->getCharacters()),
-        ], array_values($parties));
+        $data = array_map(function($party) {
+            $memberCount    = count($party->getCharacters());
+            $availableSlots = $party->getMaxSize() - $memberCount;
+            $memberIds      = array_map(fn($c) => $c->getId(), $party->getCharacters()->toArray());
+
+            return [
+                'id'             => $party->getId(),
+                'name'           => $party->getName(),
+                'description'    => $party->getDescription(),
+                'maxSize'        => $party->getMaxSize(),
+                'maxMembers'     => $party->getMaxSize(),     // alias pour React
+                'members'        => $memberIds,               // tableau d'IDs pour React
+                'memberCount'    => $memberCount,
+                'availableSlots' => max(0, $availableSlots),
+            ];
+        }, array_values($parties));
 
         return $this->json($data);
     }
@@ -43,6 +52,9 @@ class ApiPartyController extends AbstractController
             return $this->json(['error' => 'Party not found'], 404);
         }
 
+        $memberCount    = count($party->getCharacters());
+        $availableSlots = $party->getMaxSize() - $memberCount;
+
         $members = array_map(fn($character) => [
             'id'    => $character->getId(),
             'name'  => $character->getName(),
@@ -51,12 +63,18 @@ class ApiPartyController extends AbstractController
             'class' => $character->getClassId()?->getName(),
         ], $party->getCharacters()->toArray());
 
+        $memberIds = array_map(fn($c) => $c->getId(), $party->getCharacters()->toArray());
+
         return $this->json([
-            'id'          => $party->getId(),
-            'name'        => $party->getName(),
-            'description' => $party->getDescription(),
-            'maxSize'     => $party->getMaxSize(),
-            'members'     => $members,
+            'id'             => $party->getId(),
+            'name'           => $party->getName(),
+            'description'    => $party->getDescription(),
+            'maxSize'        => $party->getMaxSize(),
+            'maxMembers'     => $party->getMaxSize(),     // alias pour React
+            'members'        => $memberIds,               // tableau d'IDs pour React
+            'memberDetails'  => $members,                 // détails complets
+            'memberCount'    => $memberCount,
+            'availableSlots' => max(0, $availableSlots),
         ]);
     }
 }

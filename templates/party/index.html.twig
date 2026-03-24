@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Groupes d'aventure{% endblock %}
+
+{% block body %}
+<h1>Groupes d'aventure</h1>
+
+<a href="{{ path('app_party_new') }}">+ Créer un groupe</a>
+
+<hr>
+
+{# Filtre #}
+<form method="get">
+    <a href="{{ path('app_party_index') }}">Tous</a> |
+    <a href="{{ path('app_party_index', {filter: 'available'}) }}">Avec places disponibles</a> |
+    <a href="{{ path('app_party_index', {filter: 'full'}) }}">Complets</a>
+</form>
+
+<hr>
+
+{% if parties is empty %}
+    <p>Aucun groupe trouvé.</p>
+{% else %}
+    {% for party in parties %}
+        {% set memberCount = party.characters|length %}
+        {% set isFull = memberCount >= party.maxSize %}
+        <div style="border:1px solid #ccc; margin:10px; padding:10px;">
+            <strong>{{ party.name }}</strong>
+            {% if isFull %}
+                <span style="color:red;">[COMPLET]</span>
+            {% else %}
+                <span style="color:green;">[{{ party.maxSize - memberCount }} place(s) disponible(s)]</span>
+            {% endif %}
+            <br>
+            {{ party.description }}
+            <br>
+            Membres : {{ memberCount }} / {{ party.maxSize }}
+            <br>
+            <a href="{{ path('app_party_show', {id: party.id}) }}">Voir</a>
+            <form method="post" action="{{ path('app_party_delete', {id: party.id}) }}" style="display:inline" onsubmit="return confirm('Supprimer ce groupe ?')">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ party.id) }}">
+                <button type="submit">Supprimer</button>
+            </form>
+        </div>
+    {% endfor %}
+{% endif %}
+{% endblock %}

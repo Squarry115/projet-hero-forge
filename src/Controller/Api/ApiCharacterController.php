@@ -28,6 +28,8 @@ class ApiCharacterController extends AbstractController
             'race'         => $c['race_name'] ?? null,
             'class'        => $c['class_name'] ?? null,
             'healthPoints' => $c['hit_points'],
+            'image'        => $c['image'],
+            'avatar'       => $c['image'], // alias pour React
         ], $characters);
 
         return $this->json($data);
@@ -53,6 +55,7 @@ class ApiCharacterController extends AbstractController
             return $this->json(['error' => 'Character not found'], 404);
         }
 
+        // Récupère les groupes du personnage
         $parties = $conn->executeQuery('
             SELECT p.id, p.name
             FROM party p
@@ -60,11 +63,26 @@ class ApiCharacterController extends AbstractController
             WHERE pc.character_id = :id
         ', ['id' => $id])->fetchAllAssociative();
 
+        // Récupère les compétences de la classe du personnage
+        $skills = $conn->executeQuery('
+            SELECT s.name, s.ability
+            FROM skill s
+            WHERE s.id_class_id = :classId
+        ', ['classId' => $character['class_id']])->fetchAllAssociative();
+
+        $skillNames = array_map(fn($s) => $s['name'], $skills);
+
         return $this->json([
             'id'           => $character['id'],
             'name'         => $character['name'],
             'level'        => $character['level'],
             'healthPoints' => $character['hit_points'],
+            'image'        => $character['image'],
+            'avatar'       => $character['image'], // alias pour React
+            'race'         => $character['race_name'], // format simple pour React
+            'class'        => $character['class_name'], // format simple pour React
+            'skills'       => $skillNames, // format tableau pour React
+            'groups'       => array_map(fn($p) => $p['id'], $parties), // IDs pour React
             'stats'        => [
                 'strength'     => $character['str'],
                 'dexterity'    => $character['dex'],
@@ -73,17 +91,7 @@ class ApiCharacterController extends AbstractController
                 'wisdom'       => $character['wis'],
                 'charisma'     => $character['cha'],
             ],
-            'race'    => [
-                'id'   => $character['race_id'],
-                'name' => $character['race_name'],
-            ],
-            'class'   => [
-                'id'         => $character['class_id'],
-                'name'       => $character['class_name'],
-                'healthDice' => $character['hit_dice'],
-            ],
             'parties' => $parties,
-            'image'   => $character['image'],
         ]);
     }
 }

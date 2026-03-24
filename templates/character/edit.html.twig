@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier {{ character.getName() }}{% endblock %}
+
+{% block body %}
+<h1>Modifier {{ character.getName() }}</h1>
+
+<p>Vous disposez de <strong id="points-restants">27</strong> points à répartir.</p>
+
+{{ form_start(form) }}
+
+    {{ form_row(form.name) }}
+    {{ form_row(form.id_Race) }}
+    {{ form_row(form.class_id) }}
+
+    <hr>
+    <h3>Caractéristiques (Point Buy — 27 points)</h3>
+
+    {{ form_row(form.STR) }}
+    {{ form_row(form.DEX) }}
+    {{ form_row(form.CON) }}
+    {{ form_row(form.INT) }}
+    {{ form_row(form.WIS) }}
+    {{ form_row(form.CHA) }}
+
+    <hr>
+    {% if character.getImage() %}
+        <p>Image actuelle : <img src="{{ asset('uploads/characters/' ~ character.getImage()) }}" style="width:60px; height:60px; border-radius:50%;"></p>
+    {% endif %}
+    {{ form_row(form.imageFile) }}
+
+    <button type="submit" id="submit-btn">Sauvegarder</button>
+    <span id="error-points" style="color:red; display:none;">Vous avez dépassé les 27 points !</span>
+
+{{ form_end(form) }}
+
+<a href="{{ path('app_character_index') }}">← Retour</a>
+
+<script>
+const stats = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
+const maxPoints = 27;
+
+function calculatePoints() {
+    let total = 0;
+    stats.forEach(stat => {
+        const input = document.querySelector(`[name*="${stat}"]`);
+        if (input) {
+            const val = parseInt(input.value) || 8;
+            total += Math.max(0, val - 8);
+        }
+    });
+    return total;
+}
+
+function updateDisplay() {
+    const used = calculatePoints();
+    const remaining = maxPoints - used;
+    document.getElementById('points-restants').textContent = remaining;
+    const errorEl = document.getElementById('error-points');
+    const submitBtn = document.getElementById('submit-btn');
+    if (remaining < 0) {
+        errorEl.style.display = 'inline';
+        submitBtn.disabled = true;
+        document.getElementById('points-restants').style.color = 'red';
+    } else {
+        errorEl.style.display = 'none';
+        submitBtn.disabled = false;
+        document.getElementById('points-restants').style.color = remaining === 0 ? 'green' : 'black';
+    }
+}
+
+stats.forEach(stat => {
+    const input = document.querySelector(`[name*="${stat}"]`);
+    if (input) input.addEventListener('input', updateDisplay);
+});
+
+updateDisplay();
+</script>
+{% endblock %}

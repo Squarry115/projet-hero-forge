@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Classes{% endblock %}
+
+{% block body %}
+<h1>Classes</h1>
+<a href="{{ path('admin_class_new') }}">+ Nouvelle classe</a>
+<a href="{{ path('app_admin') }}">← Dashboard</a>
+<hr>
+<table border="1" cellpadding="8">
+    <thead><tr><th>Nom</th><th>Description</th><th>Dé de vie</th><th>Actions</th></tr></thead>
+    <tbody>
+        {% for class in classes %}
+        <tr>
+            <td>{{ class.name }}</td>
+            <td>{{ class.description }}</td>
+            <td>d{{ class.hitDice }}</td>
+            <td>
+                <a href="{{ path('admin_class_edit', {id: class.id}) }}">Modifier</a>
+                <form method="post" action="{{ path('admin_class_delete', {id: class.id}) }}" style="display:inline" onsubmit="return confirm('Supprimer ?')">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ class.id) }}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

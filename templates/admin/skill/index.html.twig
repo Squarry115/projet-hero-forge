@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compétences{% endblock %}
+
+{% block body %}
+<h1>Compétences</h1>
+<a href="{{ path('admin_skill_new') }}">+ Nouvelle compétence</a>
+<a href="{{ path('app_admin') }}">← Dashboard</a>
+<hr>
+<table border="1" cellpadding="8">
+    <thead><tr><th>Nom</th><th>Caractéristique</th><th>Classe</th><th>Actions</th></tr></thead>
+    <tbody>
+        {% for skill in skills %}
+        <tr>
+            <td>{{ skill.name }}</td>
+            <td>{{ skill.ability }}</td>
+            <td>{{ skill.idClass.name }}</td>
+            <td>
+                <a href="{{ path('admin_skill_edit', {id: skill.id}) }}">Modifier</a>
+                <form method="post" action="{{ path('admin_skill_delete', {id: skill.id}) }}" style="display:inline" onsubmit="return confirm('Supprimer ?')">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ skill.id) }}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
