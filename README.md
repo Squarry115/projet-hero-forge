@@ -1,10 +1,10 @@
-# 🏰 Forge de Héros — Application Symfony
+# Forge de Héros — Application Symfony
 
 Application fullstack + API REST de création et gestion de personnages de jeu de rôle, inspirée de l'univers de Donjons & Dragons.
 
 ---
 
-## 📋 Prérequis
+## Prérequis
 
 - PHP 8.4+
 - Composer 2+
@@ -12,7 +12,7 @@ Application fullstack + API REST de création et gestion de personnages de jeu d
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### 1. Cloner le dépôt
 
@@ -29,13 +29,7 @@ composer install
 
 ### 3. Configurer la base de données
 
-Copier le fichier `.env` et configurer SQLite :
-
-```bash
-cp .env .env.local
-```
-
-Dans `.env.local`, vérifier que la ligne suivante est présente :
+Dans `.env`, vérifier que la ligne suivante est présente :
 
 ```env
 DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
@@ -70,7 +64,7 @@ L'application est accessible sur **http://127.0.0.1:8000**
 
 ---
 
-## 🔑 Compte administrateur (créé par les fixtures)
+## Compte administrateur (créé par les fixtures)
 
 | Champ | Valeur |
 |-------|--------|
@@ -79,7 +73,7 @@ L'application est accessible sur **http://127.0.0.1:8000**
 
 ---
 
-## 📱 Fonctionnalités
+## Fonctionnalités
 
 ### Authentification
 - Inscription / Connexion
@@ -104,7 +98,7 @@ L'application est accessible sur **http://127.0.0.1:8000**
 
 ---
 
-## 🌐 API REST
+## API REST
 
 L'API est accessible publiquement sous `/api/v1/`. Aucune authentification requise.
 
@@ -122,7 +116,7 @@ L'API est accessible publiquement sous `/api/v1/`. Aucune authentification requi
 
 ---
 
-## 🗂️ Structure du projet
+## Structure du projet
 
 ```
 src/
@@ -143,7 +137,7 @@ templates/                # Templates Twig
 
 ---
 
-## ⚙️ Variables d'environnement
+## Variables d'environnement
 
 | Variable | Description | Valeur par défaut |
 |----------|-------------|-------------------|

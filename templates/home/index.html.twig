@@ -3,12 +3,12 @@
 {% block title %}Accueil - Forge de Héros{% endblock %}
 
 {% block body %}
-<h1>🏰 Bienvenue sur la Forge de Héros</h1>
+<h1>Bienvenue sur la Forge de Héros</h1>
 <p>Créez et gérez vos personnages de jeu de rôle !</p>
 
 {% if is_granted('ROLE_USER') %}
     <p>Vous êtes connecté en tant que <strong>{{ app.user.username }}</strong>.</p>
-    <a href="#">Voir mes personnages</a>
+    <a href="{{ path('app_character_index') }}">Voir mes personnages</a>
 {% else %}
     <a href="{{ path('app_register') }}">Créer un compte</a>
     &nbsp;|&nbsp;
